@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Navish Wadhwa: APS march 2021</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/dist/theme/nw.css" id="theme">
+</head>
+
+<style type="text/css">
+	code {
+		white-space: pre;
+	}
+
+	.MathJax_CHTML {
+		color: rgb(100, 100, 100);
+		font-size: 100% !important;
+	}
+
+	.container {
+		display: flex;
+	}
+
+	.col {
+		flex: 1;
+	}
+
+
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+</style>
+
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<!-- ########################################################## -->
+			<section>
+				<div class="container">
+					<div class="col">
+						<img src="./figures/motor-art-taylor.jfif">
+						<p style="font-size:0.4em;"> Artwork: Dan Nowakowski/Nicholas Taylor</p>
+					</div>
+
+					<div class="col">
+						</br>
+						<div class="r-stack">
+							<h3 class="fragment fade-in-then-out">Mechanobiology of
+								stator remodeling in the bacterial flagellar motor</h3>
+							<h3 class="fragment fade-in-then-out"><del>Mechanobiology of
+									stator remodeling in the bacterial flagellar motor</del> Does the bacterial
+								flagellar engine have an automatic gearshift?</h3>
+						</div>
+						</br>
+						<h4><b>Navish Wadhwa</b>, Yuhai Tu, Howard C Berg</h4>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h2>Bacteria swim by rotating helical flagella</h2>
+				<img src="./figures/fluo-bundle.gif">
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h2>...Powered by a molecular engine</h2>
+				<div class="container">
+					<div class="col">
+						<img class="fragment" src="./figures/motor-structure.png" style="width: 20vw">
+					</div>
+					<div class="col">
+						<br><br><br>
+						<img class="fragment" src="./figures/stator-exchange.png" style="width: 10vw">
+					</div>
+				</div>
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h2>Automatic gearshift in cars allows the engine to adapt to changing terrains</h2>
+				<div class="container">
+					<div class="col">
+						<img class="fragment" src="./figures/car-flat.png">
+					</div>
+					<div class="col">
+						<img class="fragment" src="./figures/car-hill.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h2>How does the bacterial flagellar engine deal with changing loads?</h2>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h2>We used electrorotation to control motor load</h2>
+				<div class="r-stack">
+					<img class="fragment fade-in-then-out" src="./figures/electro-2.png">
+					<img class="fragment fade-in-then-out" src="./figures/electro-1.png">
+					<img class="fragment fade-in-then-out" src="./figures/electro-example.gif" style="width: 25vw">
+				</div>
+
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h2> Conclusions</h2>
+
+				<iframe width="820" height="415" src="https://www.youtube.com//embed/5PyoO4S3BU0">
+				</iframe>
+				<p> It is also possible to add videos from the web. </p>
+			</section>
+		</div>
+	</div>
+
+	<script src="../reveal.js/dist/reveal.js"></script>
+	<script src="../reveal.js/plugin/math/math.js"></script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+	<script>
+		Reveal.initialize({
+			center: true,
+			history: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			math: {
+				// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				TeX: {
+					Macros: {
+						R: '\\mathbb{R}',
+						set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+					}
+				}
+			},
+
+			plugins: [RevealMath]
+		});
+
+	</script>
+
+
+
+</body>
+
+</html>
