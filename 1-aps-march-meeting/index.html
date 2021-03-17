@@ -136,19 +136,25 @@
 			<section>
 				<h2>A change in load triggers stepwise changes in motor speed</h2>	
 				<div class="r-stack">
-					<img height="250" class="fragment fade-in-then-out" src="./figures/electro-example-no-steps.png">
-					<img height="250" class="fragment fade-in" src="./figures/electro-example-with-steps.png">
+					<img height="230" class="fragment fade-in-then-out" src="./figures/electro-example-no-steps.png">
+					<img height="230" class="fragment fade-in" src="./figures/electro-example-with-steps.png">
 				</div>
 				<div> 
-					<img height="250" class="fragment" src="./figures/stoichiometry-example.png">
+					<img height="230" class="fragment" src="./figures/stoichiometry-example.png">
 				</div>
-			
+				<p style="text-align:right; font-size: 0.45em;">Wadhwa et al., <b>PNAS</b>, 2019</p>
 			</section>
 
 			<section data-visibility="uncounted">
 				<h2>The stator remodels in response to load change</h2> 
-				<br><br>	
-				<img height="350" src="./figures/remodeling-schematic.png">	
+				<br>	
+				<img height="300" src="./figures/remodeling-schematic.png">	
+				<p style="text-align:right; font-size: 0.45em;">
+					Wadhwa et al., <b>PNAS</b>, 2019<br>
+					Lele et al., <b>PNAS</b>, 2013<br>
+					Nord et al., <b>PNAS</b>, 2017
+				</p>
+				<p style="text-align:right; font-size: 0.45em;"></p>
 			</section>
 
 			<!-- ########################################################## -->
@@ -156,8 +162,11 @@
 				<h2>How does it work?</h2>
 				<p>We "tuned the knobs" to change the strength of the electrorotation torque</p>
 				<!-- <img height="50" src="./figures/electro-on.png"> -->
-				<img height="470" class="fragment" src="./figures/stoichiometry-plots.png">
+				<img height="400" class="fragment" src="./figures/stoichiometry-plots.png">
 				<p class="fragment">We extracted the on- and off-rates of stator unit binding</p>
+				<p style="text-align:right; font-size: 0.45em;">
+					Wadhwa et al., <b>PNAS</b>, 2019<br>
+				</p>
 			</section>
 
 			<!-- ########################################################## -->
@@ -194,6 +203,9 @@
 				<h4 style="font-size:0.7em" class="fragment">
 					Torque is the main parameter governing stator remodeling
 				</h4>
+				<p style="text-align:right; font-size: 0.45em;">
+					Wadhwa et al., <b>PNAS (in press)</b>, 2021<br>
+				</p>
 			</section>
 
 			<!-- ########################################################## -->
@@ -207,7 +219,7 @@
 						<img height="250" src="./figures/bacteria-engine.png">
 					</div>
 				</div>
-				<h4 style="font-size:0.7em" class="fragment">Cars change the transmission while bacteria change the engine itself</h4>
+				<h4 style="font-size:0.7em" class="fragment">Cars adapt the transmission while bacteria adapt the engine itself</h4>
 			</section>
 
 			<!-- ########################################################## -->
@@ -276,52 +288,7 @@
 
 	</script>
 
-<style type="text/css">
-    /* 1. Style header/footer <div> so they are positioned as desired. */
-    #header-left {
-        position: absolute;
-        top: 0%;
-        left: 2%;
-    }
-    #header-right {
-        position: absolute;
-        top: 0%;
-        right: 0%;
-    }
-    #footer-left {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-    }
-	#footer-right {
-        position: absolute;
-        bottom: 0%;
-        right: 0%;
-    }
-</style>
 
-<!-- 2. Create hidden header/footer <div> -->
-<div id="hidden" style="display:none;">
-    <div id="header">
-        <div id="header-left">
-		<p style="font-size: 0.45em;">Navish Wadhwa - APS March 2021</p>
-		</div>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript">
-    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
-    var header = $('#header').html();
-    if ( window.location.search.match( /print-pdf/gi ) ) {
-        Reveal.addEventListener( 'ready', function( event ) {
-            $('.slide-background').append(header);
-        });
-    }
-    else {
-        $('div.reveal').append(header);
-   }
-</script>
 
 </body>
 
