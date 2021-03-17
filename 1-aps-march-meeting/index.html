@@ -75,6 +75,8 @@
 			<section>
 				<h2>Bacteria swim by rotating helical flagella</h2>
 				<img src="./figures/fluo-bundle.gif">
+				
+				<p style="text-align:right; font-size: 0.45em;"><br>Turner et al., <b>J. Bacteriol.</b>, 2000</p>
 			</section>
 
 
@@ -83,11 +85,19 @@
 				<h2>...Powered by a molecular engine</h2>
 				<div class="container">
 					<div class="col">
-						<img height="600" src="./figures/motor-structure.png" >
+						<img height="500" src="./figures/motor-structure.png" >
+						<p style="text-align:left; font-size: 0.45em;">
+							Nakamura and Minamino, <b>Biomolecules</b>, 2019<br> Santiveri et al., <b>Cell</b>, 2020
+						</p>
 					</div>
 					<div class="col">
 						<br><br><br>
-						<img height="300" class="fragment" src="./figures/stator-exchange.png">
+						<div class="fragment">
+						<img height="250" src="./figures/stator-exchange.png">
+						<p style="text-align:right; font-size: 0.45em;">
+							<br><br><br><br>Leake et al., <b>Nature</b>, 2006 
+						</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -266,7 +276,52 @@
 
 	</script>
 
+<style type="text/css">
+    /* 1. Style header/footer <div> so they are positioned as desired. */
+    #header-left {
+        position: absolute;
+        top: 0%;
+        left: 2%;
+    }
+    #header-right {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    #footer-left {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+    }
+	#footer-right {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+    }
+</style>
 
+<!-- 2. Create hidden header/footer <div> -->
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-left">
+		<p style="font-size: 0.45em;">Navish Wadhwa - APS March 2021</p>
+		</div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        Reveal.addEventListener( 'ready', function( event ) {
+            $('.slide-background').append(header);
+        });
+    }
+    else {
+        $('div.reveal').append(header);
+   }
+</script>
 
 </body>
 
