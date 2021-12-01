@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Wadhwa: SLAAM, November 2021</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/dist/theme/nw.css" id="theme">
+</head>
+
+<style type="text/css">
+	code {
+		white-space: pre;
+	}
+
+	.MathJax_CHTML {
+		color: rgb(100, 100, 100);
+		font-size: 100% !important;
+	}
+
+	.container {
+		display: flex;
+	}
+
+	.col {
+		flex: 1;
+	}
+
+
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+</style>
+
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<!-- ########################################################## -->
+			<section>
+				<div class="container">
+					<div class="col">
+						<img src="../figures/motor-art-taylor.jfif">
+						<p style="font-size:0.5em;"> Artwork: Dan Nowakowski/Nicholas Taylor</p>
+					</div>
+
+					<div class="col">
+						</br>
+							<h4 >
+								Mechano-adaptation in a large protein complex
+							</h4>
+							<p>Soft, Living, Active and Adaptive Matter (SLAAM) Seminar
+								<br>November 2021<br><br>
+							</p>
+						<p><b>Navish Wadhwa</b>
+						<br>Harvard University<br><br></p>
+						
+						<div class="container">
+							<div class="text">
+								<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							</div>
+							<div class="image">
+							  <img height="30" src="../figures/twitter.jpg">
+							</div>
+							<div class="text">
+								<p style="font-size:0.5em;"><a href="https://twitter.com/NavishWadhwa" target="_blank">@NavishWadhwa</a></p>
+							</div>
+						</div>
+							
+						
+						
+						<p>slides for this talk: <a href="https://navishwadhwa.com/talks" target="_blank">navishwadhwa.com/talks</a></p>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Machines perform specific tasks for us</h3>
+					<img height="400" src="../figures/car.jpg">	
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Cells use molecular machines to perform specific tasks</h3>
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:left; font-size: 0.45em;">
+							<img height="200" src="../figures/ATP_synthase.gif"> ATP synthase	
+						</p>
+					</div>
+					<div class="col">
+						<p style="margin-left: 20px; text-align:left; font-size: 0.45em;">
+							<img height="200" src="../figures/Ribosome.gif"> Ribosome	
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:left; font-size: 0.45em;">
+							<img height="200" src="../figures/DNA_Replisome.gif"> Replisome	
+						</p>
+					</div>
+				</div>			
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<img height="400" src="../figures/car.jpg">
+				<h3 class="fragment">Do cells have smart machines too?</h3>
+				<h4 class="fragment" style="font-size: 1em;">Yes, they do.</h4>	
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>We use the bacterium <em>E. coli</em> as a model organism</h3>
+				<div class="container">
+					<div class="col">
+						<img height="300" src="../figures/e-coli.png">
+					</div>
+					<div class="col">
+						<div class="vertical-center">
+							<p style="text-align:left;"><br>Inhabits guts of mammals</p>
+							<p style="text-align:left;"><br>Some strains are harmful, most harmless</p>
+							<p style="text-align:left;"><br>Multiple flagella per cell</p>
+						</div>
+					</div>
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., <b>J. Bacteriol.</b>, 2000</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Bacteria are the smallest self-propelled swimmers</h3>
+				<img height="450" src="../figures/swimming-cells.gif">	
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Many bacteria swim by rotating helical flagella</h3>
+				
+				<div class="container">
+					<div class="col">
+												
+						<p style="text-align:left; font-size: 0.55em;">
+							<img src="../figures/fluo-bundle.gif"> Slowed down 20 times	
+						</p>
+					</div>
+					<div class="col">
+						<br><br>
+						<div>
+						<img height="120" src="../figures/swimming-schematic.png">
+						</div>
+					</div>
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., <b>J. Bacteriol.</b>, 2000</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>A nanoscale motor powers<br> swimming in bacteria</h3>
+				<div class="container">
+					<div class="col">
+						<div class="r-stack">
+						<img height="500" src="../figures/ecoli-swimming.png">
+						<img height="500" class="fragment fade-in" src="../figures/ecoli-swimming-motor.png">
+					</div>
+					<p style="text-align:left; font-size: 0.45em;">
+							<br>
+							<a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank">Wadhwa and Berg, <b>Nature Rev. Microbiol.</b>, 2021</a> 
+						</p>
+					</div>
+					<div class="col">
+						<br><br><br><br>
+						<div class="fragment">
+						<img height="210" src="../figures/stator-exchange.png">
+						<p style="text-align:right; font-size: 0.45em;">
+							<br><br><br><a href="https://www.nature.com/articles/nature05135" target="_blank">Leake et al., <b>Nature</b>, 2006</a>  
+						</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Motor torque depends upon its rotation speed</h3>
+				<div class="r-stack">
+					<img height="400"  src="../figures/TS-CCW.png">
+					<!-- <img height="400" class="fragment fade-in-then-out" src="../figures/TS-both.png"> -->
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.sciencedirect.com/science/article/pii/S0006349500766628" target="_blank">
+						Chen and Berg, <b>Biophys. J.</b>, 2000</a><br>
+					<a href="https://www.pnas.org/content/107/29/12846.long" target="_blank">
+						Yuan et al, <b>PNAS</b>, 2010</a> 
+				</p>
+			</section>
+
+			<!-- <section data-visibility="uncounted">
+				<h4>How does the motor cope with sudden changes in mechanical load?</h4>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Automatic gearshift in cars allows the engine to adapt to changing terrains</h3>
+				<br>
+				<div class="container">
+					<div class="col">
+						<img src="../figures/car-flat.png">
+					</div>
+					<div class="col">
+						<img class="fragment" src="../figures/car-hill.png">
+					</div>
+				</div>
+				<br><br>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Automatic gearshift in <em>E. coli</em> allows the motor to adapt to changing loads</h3>
+				<div class="container">
+					<div class="col">
+						<img height="90" style="margin-top: 35px;" src="../figures/lele-stub.png">
+					</div>
+					<div class="col">
+						<img height="120" class="fragment" src="../figures/lele-stub-bead.png">
+					</div>
+				</div>
+				<img height="350" class="fragment" src="../figures/lele-steps.png">
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/110/29/11839.long" target="_blank">
+						Lele et al., <b>PNAS</b>, 2013</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h4 style="font-size: 1em;">What is the physical and molecular mechanism underlying this automatic gearshift?</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>How can we change motor load?</h3>
+				<div class="r-stack">
+					<img class="fragment fade-in-then-out" data-fragment-index="1" height="300" src="../figures/load-time-0.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="2" height="300" src="../figures/load-time-1.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="3" height="300" src="../figures/load-time-2.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="4" height="300" src="../figures/load-time-3.png">
+				</div>
+				<div class="container">
+					<div class="col">
+						<h4 style="font-size: 0.6em;" class="fragment" data-fragment-index="2">Instantaneously</h4>
+					</div>
+					<div class="col">
+						<h4 style="font-size: 0.6em;" class="fragment" data-fragment-index="3">Reversibly</h4>
+					</div>
+					<div class="col">
+						<h4 style="font-size: 0.6em;"  class="fragment" data-fragment-index="4">Controllably</h4>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Electrorotation allows<br> full control over motor load</h3>
+				<div class="r-stack">
+					<img height="350" style="vertical-align:middle;margin:10px 50px" class="fragment fade-in-then-out" src="../figures/electro-2.png">
+					<img height="400" style="vertical-align:middle;margin:1px 45px" class="fragment fade-in" src="../figures/electro-1.png">
+				</div>
+				<div class="fragment">
+					<div class="container">
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Instantaneous</h4>
+						</div>
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Reversible</h4>
+						</div>
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Controllable</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section data-visibility="uncounted">
+				<h3>Electrorotation allows<br> full control over motor load</h3>
+				<img height="350" src="../figures/electro-setup.jpg">
+				<img class="fragment" height="350" src="../figures/electro-example.gif">
+				
+			</section>
+			
+			<!-- ########################################################## -->
+			<section>
+				<h3>A change in load triggers stepwise changes in motor speed</h3>	
+				<div class="r-stack">
+					<img height="230"  src="../figures/electro-all-cover.png">
+					<img height="230" class="fragment fade-in-then-out" src="../figures/electro-init.png">
+					<img height="230" class="fragment fade-in-then-out" src="../figures/electro-low.png">
+					<img height="230" class="fragment fade-in-then-out" src="../figures/electro-example-no-steps.png">
+					<img height="230" class="fragment fade-in" src="../figures/electro-example-with-steps.png">
+				</div>
+				<div> 
+					<img height="220" class="fragment" src="../figures/stoichiometry-example.png">
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., <b>PNAS</b>, 2019</a>
+				</p>
+			</section>
+
+			<section>
+				<h3>The motor adapts to changes<br> in load by remodeling its stator</h3> 
+				<br>	
+				<img height="250" src="../figures/remodeling-schematic-new.jpg">	
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+					Wadhwa et al., <b>PNAS</b>, 2019</a><br>
+					<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+						Wadhwa et al., <b>PNAS</b>, 2021</a>		
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Remodeling kinetics depend on electrorotation speed</h3>
+				<img height="70" src="../figures/electro-torque.png">
+				<img class="fragment" src="../figures/stoichiometry-plots-subset.png">
+				<!-- <p class="fragment">We extracted the on- and off-rates of stator unit binding</p> -->
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., <b>PNAS</b>, 2019</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Higher electrorotation speed leads to lower torque</h3>
+				<div class="r-stack">
+					<img height="400"  src="../figures/TS-CCW.png">
+					<img height="400" class="fragment fade-in" src="../figures/TS-CCW-arrow.png">
+				</div>
+			</section>
+			
+			<section data-visibility="uncounted">
+				<h4 style="font-size: 1em;"><b><u>Hypothesis</u></b><br>Stator remodeling depends on torque</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>A quantitative model for stator assembly</h3>
+				<div class="container">
+					<div class="col">
+						<br>
+						<img height="200" src="../figures/model-schematic.png">
+						<!-- <img height="270" src="../figures/off-rate-torque.png"> -->
+					</div>
+					<div class="col">
+						<br>
+						<img class="fragment" height="235" src="../figures/model-fit.png">
+						<br>
+					</div>
+				</div>
+				<p class="fragment">We extracted the on rate ($k_+$) and the off rate ($k_-$) from the data<br><br><br></p>
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., <b>PNAS</b>, 2019</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>The off-rate decreases with torque</h3>
+				<div class="container">
+					<div class="col">
+						<br>
+						<img height="150" style="margin: 50px 0px 0px 100px;" src="../figures/rates-schematic.png">
+						<!-- <img height="270" src="../figures/off-rate-torque.png"> -->
+					</div>
+					<div class="col">
+						<img height="350" src="../figures/off-rate-torque.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Free energy of the bound state decreases with torque</h3>
+				<div class="container">
+					<div class="col">
+						<div class="r-stack">
+							<img height="400"  src="../figures/free-energy-1.png">
+							<img height="400" class="fragment fade-in-then-out" src="../figures/free-energy-2.png">
+							<img height="400" class="fragment fade-in" src="../figures/free-energy-3.png">
+						</div>
+					</div>
+					<div class="col">
+						<img height="370" class="fragment" style="margin-left: 30px;" src="../figures/free-energy-torque.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>The off-rate decreases exponentially with torque</h3>
+				<img height="400" src="../figures/off-rate-torque-fit.png">
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Molecular mechanism for torque-dependent unbinding rate</h3>
+				<div class="container">
+					<div class="col">
+						<img height="400" class="fragment" data-fragment-index="1" style="margin-left: 30px;" src="../figures/motor-low-load.png">
+						<h4 class="fragment" data-fragment-index="1" style="font-size: 0.6em; margin-left: 100px;">Low torque</h4>
+					</div>
+					<div class="col">
+						<img height="400" class="fragment" data-fragment-index="2" style="margin-left: 30px;" src="../figures/motor-high-load.png">
+						<h4 class="fragment" data-fragment-index="2" style="font-size: 0.6em; margin-left: 100px;"> 
+							High torque</h4>
+					</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Torque anisotropy allows us to test the model</h3>
+				<img height="400" src="../figures/TS-both.png">
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Collapse of CCW and CW data validates the model</h3>
+				<div class="container">
+					<div class="col">
+						<img height="350" src="../figures/data-collapse.png">
+					</div>
+					<div class="col">
+						<img height="330" style="margin-top: 35px;" src="../figures/data-collapse-free-energy.png">
+					</div>
+				</div>
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+						Wadhwa et al., <b>PNAS</b>, 2021</a>
+				</p>
+			</section>
+
+			<section>
+				<h3>Conclusions and outlook</h3>
+				<img height="200" src="../figures/bacteria-engine.png"><br>
+				<img height="200" style="margin-left:100px" src="../figures/remodeling-schematic.png">
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Cars and bacteria use different approaches</h3>
+				<div class="container">
+					<div class="col">
+						<img height="270" src="../figures/car-flat.png">
+					</div>
+					<div class="col">
+						<img height="250" src="../figures/bacteria-engine.png">
+					</div>
+				</div>
+				<h4 style="font-size:0.7em"><br>Cars adapt the transmission while bacteria adapt the engine itself<br><br><br><br></h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Flagellar motor is a bacterial mechanosensor</h3>
+				<div class="r-stack">
+					<img height="500"  src="../figures/motor-signaling-1.png">
+					<img height="500" class="fragment fade-in-then-out" src="../figures/motor-signaling-2.png">
+					<img height="500" class="fragment fade-in-then-out" src="../figures/motor-signaling-3.png">
+					<img height="500" class="fragment fade-in-then-out" src="../figures/motor-signaling-4.png">
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div class="col">
+						<img src="../figures/motor-art-taylor.jfif">
+						<!-- <p style="font-size:0.5em;"> Artwork: Dan Nowakowski/Nicholas Taylor</p> -->
+					</div>
+
+					<div class="col">
+						<h4 style="font-size:0.7em">
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							Molecular machines are not static, fixed structures, but flexible, dynamic, and responsive.
+						</h4>
+					</div>
+				</div>
+			</section>
+
+
+<!-- 
+			<section>
+				<h3>Conclusions and perspective</h3>
+				<div class="container">
+					<div class="col">
+						<img height="200" src="../figures/bacteria-engine.png"><br>
+				<img height="200" style="margin-left:100px" src="../figures/remodeling-schematic-new.jpg">
+					</div>
+					<div class="col">
+						<h4 style="font-size: 0.7em; margin-left: 100px;"> 
+						<br><br><br>
+						Evolution has given bacteria a remarkable 
+						molecular machine that is capable of
+						autonomous mechano-adaptation. </h4>
+					</div>
+				
+			</section> -->
+
+			
+			<!-- ########################################################## -->
+			<section>
+				<h3>Acknowledgements</h3>
+				<div class="container">
+					<div class="col">
+						<p style="text-align: left;">
+							<div class="container">
+								<div class="col">				
+									<p style="font-size:0.45em;">
+										<img height="150" src="../figures/people/howard.png">
+										<br>Howard Berg (Harvard)
+									</p>
+									<p style="font-size:0.45em;">
+										<img height="150" src="../figures/people/yuhai.jpg">
+										<br>Yuhai Tu (IBM)
+									</p>
+								</div>
+								<div class="col">
+									<p style="font-size:0.45em;">
+										<img height="150" src="../figures/people/rob.jpg">
+										<br>Rob Phillips (Caltech)
+									</p>
+									
+									<p style="font-size:0.45em;">
+										<img height="150" src="../figures/people/alberto.jfif">
+										<br>Alberto Sassi (IBM)
+									</p>
+								</div>
+							</div>	
+						</p>
+					</div>
+					<div class="col">
+							<p style="font-size:0.5em; margin-right: 50px;"><img height="230" src="../figures/nigms-logo-500px.gif"><br>NIH Pathway to Independence Award</p>
+
+							<div class="container">
+								<div class="text">
+									<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+								</div>
+								<div class="image">
+								  <img height="30" src="../figures/twitter.jpg">
+								</div>
+								<div class="text">
+									<p style="font-size:0.5em;"><a href="https://twitter.com/NavishWadhwa" target="_blank">@NavishWadhwa</a></p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="text">
+									<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+								</div>
+								<div class="image">
+								  <img height="30" src="../figures/web-icon.jpg">
+								</div>
+								<div class="text">
+									<p style="font-size:0.5em;"><a href="https://navishwadhwa.com" target="_blank">www.navishwadhwa.com</a></p>
+								</div>
+							</div>
+					</div>
+
+				</div>
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="../reveal.js/dist/reveal.js"></script>
+	<script src="../reveal.js/plugin/math/math.js"></script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+	<script>
+		Reveal.initialize({
+
+			center: true,
+			history: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			math: {
+				// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				TeX: {
+					Macros: {
+						R: '\\mathbb{R}',
+						set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+					}
+				}
+			},
+
+			plugins: [RevealMath]
+		});
+
+	</script>
+
+
+
+</body>
+
+</html>
