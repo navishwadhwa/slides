@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Wadhwa: ASU Physics, April 2022</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/dist/theme/nw.css" id="theme">
+</head>
+
+<style type="text/css">
+	code {
+		white-space: pre;
+	}
+
+	.MathJax_CHTML {
+		color: rgb(100, 100, 100);
+		font-size: 100% !important;
+	}
+
+	.container {
+		display: flex;
+	}
+
+	.col {
+		flex: 1;
+	}
+
+
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+</style>
+
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			
+			<!-- ########################################################## -->
+			<section>
+				<div class="container">
+					<div class="col">
+						<img src="../figures/motor-art-taylor.jfif">
+						<p style="font-size:0.3em;"> Artwork: Dan Nowakowski/Nicholas Taylor</p>
+					</div>
+
+					<div class="col">
+						</br>
+							<h4 >
+								Nature's automatic gear shift: the biophysics of mechano-adaptation in bacterial flagella
+							</h4>
+							<p>Arizona State University
+								<br>April 2022<br><br>
+							</p>
+						<p><b>Navish Wadhwa</b>
+						<br>Harvard University<br><br></p>
+						
+						<div class="container">
+							<div class="text">
+								<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							</div>
+							<div class="image">
+							  <img height="30" data-src="../figures/twitter.jpg">
+							</div>
+							<div class="text">
+								<p style="font-size:0.5em;"><a href="https://twitter.com/NavishWadhwa" target="_blank">@NavishWadhwa</a></p>
+							</div>
+						</div>
+
+						<!-- <p>slides for this talk: <a href="https://WadhwaLab.com/talks" target="_blank">WadhwaLab.com/talks</a></p> -->
+					</div>
+				</div>
+
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 class="fragment" data-fragment-index="3">Mechanical forces shape the lives of organisms</h3>
+				<div class="r-stack">
+					<img height="500" data-src="../figures/trees/tree.png">
+					<img class="fragment fade-in" data-fragment-index="2" height="500" data-src="../figures/trees/tree-wind.png">
+				</div>
+				<aside class="notes">
+					For the past 60 years, the dominant perspective in biological research has been that genes control the lives of living organisms
+					This view has been very successful, leading to an unprecedented advancement in our understanding of the living world
+					But this view misses an important factor affecting lived of living organisms
+					Physical environment of an organisms, also affects cellular life through mechanical forces; these are the forces that I study.
+					I aim to elucidate the general principles of the role of mechanics in biology by studying simplest living organisms - bacteria,
+					which are oftern considered the hydrogen atom of modern biology
+					In today's talk, I will show you a concrete example of how mechanical forces affect living matter and how living matter adapts to forces.
+					But before we get to that, I want to tell you a little bit about my trajectory, to give you a better sense of where I am coming from.
+				</aside>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>My journey towards biophsyics</h3>
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:center; font-size: 0.5em;">
+							New Delhi (Undergrad) <br><img height="300" data-src="../figures/bubbles-simulation.png">	
+						</p>
+					</div>
+
+					<div class="col">
+						<p class="fragment" data-fragment-index="1" style=" text-align:center; font-size: 0.5em;">
+							Bangalore <br>(Research Fellowship) <img height="250" data-src="../figures/old-work/fly-vid-only.gif"> 	
+						</p>
+					</div>
+					
+					<div class="col">
+						<p class="fragment" data-fragment-index="2" style=" margin-left: 40px; text-align:center; font-size: 0.5em;">
+							Virginia (Master's) <img height="300" data-src="../figures/old-work/vt-jets.jpg">
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:center; font-size: 0.4em;">
+							<a href="http://triggered.stanford.clockss.org/ServeContent?url=http%3A%2F%2Fmulti-science.atypon.com%2Fdoi%2Fabs%2F10.1260%2F1756-8315.2.2-3.143" target="_blank">Wadhwa et al., IJEMFS, 2010</a>
+						</p>
+					</div>
+					<div class="col fragment" data-fragment-index="2">
+						<p style=" text-align:center; font-size: 0.4em;">
+							</p>
+					</div>
+					<div class="col fragment" data-fragment-index="2">
+						<p style="text-align:center; font-size: 0.4em;">
+							<a href="https://aip.scitation.org/doi/full/10.1063/1.3640005" target="_blank">Wadhwa and Jung, PRE 2011</a>
+							<br><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.124502" target="_blank">Wadhwa et al., PRL 2013</a>
+						</p>
+					</div>
+				</div>		
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Ph.D. research: Flow-mediated interactions between marine plankton</h3>
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:center; font-size: 0.7em;">
+							EAT 
+							<div class="r-stack">
+								<img class="fragment fade-in" data-fragment-index="1" height="400" src="../figures/old-work/nauplius.gif">
+								<img class="fragment fade-in-then-out" data-fragment-index="2" height="400" src="../figures/old-work/nauplius-still.bmp">
+							</div>	
+						</p>
+					</div>
+					<div class="col">
+						<p style=" text-align:center; font-size: 0.7em;">
+							EATEN 
+							<div class="r-stack">
+								<img class="fragment fade-in-then-out" data-fragment-index="2" height="400" src="../figures/old-work/copepod-attack.gif">
+							</div>
+							 	
+						</p>
+					</div>
+				</div>		
+				<p style="text-align:right; font-size: 0.4em;">
+					Thomas Kiørboe
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Ph.D. research: Plankton use a variety of swimming strategies</h3>
+
+				<div class="container">
+					<div class="col">				
+						<div class="container">
+							<div class="col">
+								<p style="margin-left: 0px; text-align:left; font-size: 0.45em;">
+									<img height="200" data-src="../figures/old-work/podon-10xslow.gif"> <br>Breast stroke
+								</p>
+							</div>
+							<div class="col">
+								<p style="margin-left: -30px; text-align:left; font-size: 0.45em;">
+									<img height="200" data-src="../figures/old-work/copepod-hover25x-slow.gif"> <br>Hovering
+								</p>
+							</div>
+						</div>
+						<p style="text-align:left; font-size: 0.45em;">
+							<img height="165" data-src="../figures/old-work/mollusk-larva-20xslow.gif"> <br>Cruising
+						</p>
+							
+					</div>
+
+					<div class="col">
+						<p style="margin-left: 0px; text-align:left; font-size: 0.45em;">
+							<img height="450" data-src="../figures/old-work/copepod-jump-100xslow.gif"><br>Jumping
+						</p>
+					</div>
+					
+				</div>	
+
+
+				<p style="text-align:left; font-size: 0.4em;">
+					<a href="https://www.pnas.org/content/111/32/11738/" target="_blank">Kiørboe et al., PNAS 2014</a>
+				</p>
+
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="font-size: 0.9em;">Ph.D. research: combining experiments and theory to elucidate plankton flows</h3>
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:center; font-size: 0.5em;">
+							Measurements <br><img height="400" data-src="../figures/old-work/dtu-piv.png">	
+						</p>
+					</div>
+					<div class="col">
+						<p style=" text-align:center; font-size: 0.5em;">
+							Modeling <br> <img height="360" data-src="../figures/old-work/podon-flow.png"> 	
+						</p>
+					</div>
+				</div>	
+				<div class="container">
+					<div class="col">				
+						<p style="text-align:center; font-size: 0.4em;">
+							<a href="https://journals.biologists.com/jeb/article-abstract/217/17/3085/12464" target="_blank">Wadhwa et al., JEB 2014</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style=" text-align:center; font-size: 0.4em;">
+							<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.91.042712" target="_blank">Andersen, Wadhwa, Kiørboe, PRE 2015</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style="margin-left: 20px; text-align:center; font-size: 0.4em;">
+							<a href="https://royalsocietypublishing.org/doi/full/10.1098/rspb.2015.1346" target="_blank">Martens*, Wadhwa*, et al., PRSB 2015</a>
+						</p>
+					</div>
+				</div>		
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Going from 'outside' of the organism to the 'inside'</h3>
+					<h4 >How do organisms sense, process, and respond to mechanical stimuli?</h4>	
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>The bacterium <em>E. coli</em> as a model organism</h3>
+				<div class="container">
+					<div class="col">
+						<img height="300" data-src="../figures/e-coli.png">
+					</div>
+					<div class="col">
+						<div class="vertical-center">
+							<p style="text-align:left;"><br>Inhabits guts of mammals</p>
+							<p style="text-align:left;"><br>Some strains are harmful, most harmless</p>
+							<p style="text-align:left;"><br>Multiple flagella per cell</p>
+						</div>
+					</div>
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., J Bact 2000</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>E. coli is a great model for quantitative biology</h3>
+					chemotaxis inspiration - Howard <br>
+					We know much less about mechanical
+			</section>
+			 -->
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>Bacteria interact with many mechanical stimuli during their life cycles</h3>
+					Surfaces <br>
+					Osmolarity <br>
+					Flows <br>
+					More <br> <br>
+
+				Today I will mainly talk about surface sensing
+			</section> -->
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Bacteria are the smallest self-propelled swimmers</h3>
+				<img height="450" data-src="../figures/swimming-cells.gif">	
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Many bacteria swim by rotating helical flagella</h3>
+				
+				<div class="container">
+					<div class="col">
+												
+						<p style="text-align:left; font-size: 0.55em;">
+							<img data-src="../figures/fluo-bundle.gif"> Slowed down 20X	
+						</p>
+					</div>
+					<div class="col">
+						<br><br>
+						<div>
+						<img height="120" data-src="../figures/swimming-schematic.png">
+						</div>
+					</div>
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., J Bact 2000</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>A nanoscale motor powers<br> swimming in bacteria</h3>
+				<div class="col">
+						<div class="r-stack">
+						<img height="500" data-src="../figures/swimming-ecoli.png">
+						<img height="500" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom.png">
+						<img height="500" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom-cryo.png">
+						<img height="500" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom-turnover.png">
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank">Wadhwa and Berg, Nature Rev. Microbiol. 2021</a>
+					<br><a href="https://pubmed.ncbi.nlm.nih.gov/33882274/" target="_blank">Tan et al., Cell 2021</a> 
+				</p>
+				</div>
+					<!-- <div class="col">
+						<br><br><br><br>
+						<div class="fragment">
+						<img height="210" data-src="../figures/stator-exchange.png">
+						<p style="text-align:right; font-size: 0.45em;">
+							<br><br><br><a href="https://www.nature.com/articles/nature05135" target="_blank">Leake et al., <b>Nature</b>, 2006</a>  
+						</p>
+						</div>
+					</div> -->
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h4>How does the flagellar motor cope with changes in mechanical load?</h4>
+					
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Automatic gearshift in cars allows the engine to adapt to changing terrains</h3>
+				<br>
+				<div class="container">
+					<div class="col">
+						<img data-src="../figures/car-flat.png">
+					</div>
+					<div class="col">
+						<img class="fragment" data-src="../figures/car-hill.png">
+					</div>
+				</div>
+				<br><br>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Automatic gearshift in <em>E. coli</em> allows the motor to adapt to changing loads</h3>
+				<div class="container">
+					<div class="col">
+						<img height="90" style="margin-top: 35px;" data-src="../figures/lele-stub.png">
+					</div>
+					<div class="col">
+						<img height="120" class="fragment" data-src="../figures/lele-stub-bead.png">
+					</div>
+				</div>
+				<img height="350" class="fragment" data-src="../figures/lele-steps.png">
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/110/29/11839.long" target="_blank">
+						Lele et al., PNAS 2013</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h4 style="font-size: 1em;">What is the physical and molecular mechanism underlying this automatic gearshift?</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>How can we change motor load?</h3>
+				<div class="r-stack">
+					<img class="fragment fade-in-then-out" data-fragment-index="1" height="300" data-src="../figures/load-time-0.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="2" height="300" data-src="../figures/load-time-1.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="3" height="300" data-src="../figures/load-time-2.png">
+					<img class="fragment fade-in-then-out" data-fragment-index="4" height="300" data-src="../figures/load-time-3.png">
+				</div>
+				<div class="container">
+					<div class="col">
+						<h4 style="font-size: 0.6em;" class="fragment" data-fragment-index="2">Instantaneously</h4>
+					</div>
+					<div class="col">
+						<h4 style="font-size: 0.6em;" class="fragment" data-fragment-index="3">Reversibly</h4>
+					</div>
+					<div class="col">
+						<h4 style="font-size: 0.6em;"  class="fragment" data-fragment-index="4">Controllably</h4>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Electrorotation allows<br> full control over motor load</h3>
+				<div class="r-stack">
+					<img height="350" style="vertical-align:middle;margin:10px 50px" class="fragment fade-in-then-out" data-src="../figures/electro-2.png">
+					<img height="400" style="vertical-align:middle;margin:1px 45px" class="fragment fade-in" data-src="../figures/electro-1.png">
+				</div>
+				<div class="fragment">
+					<div class="container">
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Instantaneous</h4>
+						</div>
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Reversible</h4>
+						</div>
+						<div class="col">
+							<h4 style="font-size: 0.6em;">Controllable</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section data-visibility="uncounted">
+				<h3>Electrorotation allows<br> full control over motor load</h3>
+				<img height="350" data-src="../figures/electro-setup.jpg">
+				<img class="fragment" height="350" data-src="../figures/electro-example.gif">
+				
+			</section>
+			
+			<!-- ########################################################## -->
+			<section>
+				<h3>A change in load triggers stepwise changes in motor speed</h3>	
+				<div class="r-stack">
+					<img height="230"  data-src="../figures/electro-all-cover.png">
+					<img height="230" class="fragment fade-in-then-out" data-src="../figures/electro-init.png">
+					<img height="230" class="fragment fade-in-then-out" data-src="../figures/electro-low.png">
+					<img height="230" class="fragment fade-in-then-out" data-src="../figures/electro-example-no-steps.png">
+					<img height="230" class="fragment fade-in" data-src="../figures/electro-example-with-steps.png">
+				</div>
+				<div> 
+					<img height="220" class="fragment" data-src="../figures/stoichiometry-example.png">
+				</div>
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., PNAS 2019</a>
+				</p>
+			</section>
+
+			<section>
+				<h3>The motor adapts to changes<br> in load by remodeling its stator</h3> 
+				<br>	
+				<img height="250" data-src="../figures/remodeling-schematic-new.jpg">	
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+					Wadhwa et al., PNAS 2019</a><br>
+					<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+						Wadhwa et al., PNAS 2021</a>		
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Remodeling kinetics depend on electrorotation speed</h3>
+				<img height="70" data-src="../figures/electro-torque.png">
+				<img class="fragment" data-src="../figures/stoichiometry-plots-subset.png">
+				<!-- <p class="fragment">We extracted the on- and off-rates of stator unit binding</p> -->
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., PNAS 2019</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Higher electrorotation speed leads to lower torque</h3>
+				<div class="r-stack">
+					<img height="400"  data-src="../figures/TS-CCW.png">
+					<img height="400" class="fragment fade-in" data-src="../figures/TS-CCW-arrow.png">
+				</div>
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.sciencedirect.com/science/article/pii/S0006349500766628" target="_blank">
+						Chen and Berg, Biophys J 2000</a>
+				</p>
+			</section>
+			
+			<section data-visibility="uncounted">
+				<h4 style="font-size: 1em;"><b><u>Hypothesis</u></b><br>Stator remodeling depends on torque</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>A quantitative model for stator assembly</h3>
+				<div class="container">
+					<div class="col">
+						<br>
+						<img height="200" data-src="../figures/model-schematic.png">
+						<!-- <img height="270" data-src="../figures/off-rate-torque.png"> -->
+					</div>
+					<div class="col">
+						<br>
+						<img class="fragment" height="235" data-src="../figures/model-fit.png">
+						<br>
+					</div>
+				</div>
+				<p class="fragment">We extracted the on rate ($k_+$) and the off rate ($k_-$) from the data<br><br><br></p>
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+						Wadhwa et al., PNAS 2019</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>The off-rate decreases with torque</h3>
+				<div class="container">
+					<div class="col">
+						<br>
+						<img height="150" style="margin: 50px 0px 0px 100px;" data-src="../figures/rates-schematic.png">
+						<!-- <img height="270" data-src="../figures/off-rate-torque.png"> -->
+					</div>
+					<div class="col">
+						<img height="350" data-src="../figures/off-rate-torque.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Free energy of the bound state decreases with torque</h3>
+				<div class="container">
+					<div class="col">
+						<div class="r-stack">
+							<img height="400"  data-src="../figures/free-energy-1.png">
+							<img height="400" class="fragment fade-in-then-out" data-src="../figures/free-energy-2.png">
+							<img height="400" class="fragment fade-in" data-src="../figures/free-energy-3.png">
+						</div>
+					</div>
+					<div class="col">
+						<img height="370" class="fragment" style="margin-left: 30px;" data-src="../figures/free-energy-torque.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>The off-rate decreases exponentially with torque</h3>
+				<img height="400" data-src="../figures/off-rate-torque-fit.png">
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Torque anisotropy allows us to test the model</h3>
+				<img height="400" data-src="../figures/TS-both.png">
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.sciencedirect.com/science/article/pii/S0006349500766628" target="_blank">
+						Chen and Berg, Biophys J 2000</a>
+					<a href="https://www.pnas.org/content/107/29/12846.short" target="_blank">
+						<br>Yuan et al, PNAS 2010</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Collapse of CCW and CW data validates the model</h3>
+				<div class="container">
+					<div class="col">
+						<img height="350" data-src="../figures/data-collapse.png">
+					</div>
+					<div class="col">
+						<img height="330" style="margin-top: 35px;" data-src="../figures/data-collapse-free-energy.png">
+					</div>
+				</div>
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+						Wadhwa et al., PNAS 2021</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Molecular mechanism for torque-dependent unbinding rate</h3>
+				<div class="container">
+					<div class="col">
+						<img height="400" class="fragment" data-fragment-index="1" style="margin-left: 30px;" data-src="../figures/motor-low-load.png">
+						<h4 class="fragment" data-fragment-index="1" style="font-size: 0.6em; margin-left: 100px;">Low torque</h4>
+					</div>
+					<div class="col">
+						<img height="400" class="fragment" data-fragment-index="2" style="margin-left: 30px;" data-src="../figures/motor-high-load.png">
+						<h4 class="fragment" data-fragment-index="2" style="font-size: 0.6em; margin-left: 100px;"> 
+							High torque</h4>
+					</div>
+			</section>
+			
+			
+			<!-- ########################################################## -->
+			<section>
+				<h3>Take home message</h3>
+				<div class="container">
+					<div class="col">
+						<img height="500" data-src="../figures/motor-remodeling-summary.png"><br>
+					</div>
+					<!-- <div class="col">
+						<p style="text-align:left;">
+							<ol class="fragment" style="text-align:left; font-size: 0.4em; ">
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.pnas.org/content/116/24/11764.full" target="_blank">
+										<b>Wadhwa</b> et al., Torque-dependent remodeling of the bacterial flagellar motor, <b>PNAS</b>, 2019.
+									</a>
+								</li>
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank"> 
+										<b>Wadhwa</b> et al., Mechanosensitive remodeling of the bacterial flagellar motor is independent of direction of rotation, <b>PNAS</b>, 2021.
+									</a>
+								</li>
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.biorxiv.org/content/10.1101/2021.12.22.473861v2.full" target="_blank">
+										<b>Wadhwa*</b>, Sassi* et al., A multi-state dynamic process confers mechano-adaptation to a biological nanomachine, <b>bioRxiv</b>, 2022.
+									</a>
+								</li>
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank">
+										<b>Wadhwa*</b> and Berg*, Bacterial motility: machinery and mechanisms, <b>Nature Rev. Microbiol.</b>, 2021.
+									</a>
+								</li>
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.sciencedirect.com/science/article/pii/S0092867420310072" target="_blank">
+										Santiveri, Roa-Eguiara,  Kühne, <b>Wadhwa</b>, et al., Structure and function of stator units of the bacterial flagellar motor, <b>Cell</b>, 2020.
+									</a>
+								</li>
+								<li style="margin-bottom: 1em;">
+									<a href="https://www.sciencedirect.com/science/article/pii/S0092867420310072" target="_blank">
+										Hu, Santiveri, <b>Wadhwa</b>, et al., Structural basis of torque generation in the bi-directional bacterial flagellar motor, <b>Trends Biochem. Sci.</b>, 2021.
+									</a>
+								</li>
+							</ol>
+							
+						</p>
+					</div> -->
+				</div>
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Cars and bacteria use different approaches</h3>
+				<div class="container">
+					<div class="col">
+						<img height="270" data-src="../figures/car-flat.png">
+					</div>
+					<div class="col">
+						<img height="250" data-src="../figures/e-coli-motor-engine.png">
+					</div>
+				</div>
+				<h4 style="font-size:0.7em"><br>Cars adapt the transmission while bacteria adapt the engine itself<br><br><br><br></h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>Contributions</h3>
+				<div class="container">
+					<div class="col">
+						<img class="fragment" height="120" data-src="../figures/electro-example.gif"><br>
+						<img height="140" class="fragment" data-src="../figures/electro-example-with-steps.png"><br>
+						<img height="100" data-src="../figures/model-schematic-crop.png">
+						<br><img height="180" data-src="../figures/data-collapse.png">
+					</div>
+					<div class="col">
+						<ul style="list-style-type:none;">
+							<li>Used electrorotation to control motor load</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li>Measured remodeing in single flagellar motors</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li>Modeled population-averaged kinetics of motor remodeling</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li> &nbsp;</li>
+							<li>Validated the model in CW rotating motors</li>
+						  </ul>  
+					</div>
+				</div>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Contributions</h3>
+				<div class="container">
+					<div class="col">
+						<p class="fragment" style="text-align:center; font-size: 0.45em;">
+							<img height="140" data-src="../figures/electro-example.gif">
+							<br>Used electrorotation to control motor load
+						</p>
+					</div>
+					<div class="col">
+						<p class="fragment" style="text-align:center; font-size: 0.45em;">
+							<img height="140" data-src="../figures/electro-example-with-steps.png">
+							<br>Measured remodeing in single flagellar motors
+						</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="col">
+						<p class="fragment" style="text-align:center; font-size: 0.45em;">
+							<img height="180" data-src="../figures/model-fit.png">
+							<br>Modeled population-averaged kinetics of motor remodeling
+						</p>
+					</div>
+					<div class="col">
+						<p class="fragment" style="text-align:center; font-size: 0.45em;">
+							<img height="180" data-src="../figures/data-collapse.png">
+							<br>Validated the model in CW rotating motors
+						</p>
+					</div>
+				</div>
+				<div class="container fragment">
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+								Wadhwa et al., PNAS 2019</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+								Wadhwa et al., PNAS 2021</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.biorxiv.org/content/10.1101/2021.12.22.473861v2.full" target="_blank">
+								Wadhwa*, Sassi* et al., Nat Comm (<i>in revision</i>)
+							</a>
+							</p>
+					</div>
+				</div>				
+			</section>
+
+						<!-- ########################################################## -->
+						<section>
+							<h3>Contributions</h3>
+							<div class="container">
+								<div class="col">
+									<p class="fragment" style="text-align:center; font-size: 0.45em;">
+										<img height="250" data-src="../figures/stator-structure-2.gif">
+										<br><a href="https://www.sciencedirect.com/science/article/pii/S0092867420310072" target="_blank">
+											Santiveri et al., Cell 2020</a>
+									</p>
+								</div>
+								<div class="col">
+									
+								</div>
+							</div>
+							<div class="container fragment">
+								<div class="col">
+									<p style="text-align:center; font-size: 0.45em;">
+										<img height="200" data-src="../figures/nat-rev-cover.jpg">
+										<br><a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank">
+											Wadhwa and Berg, Nature Rev Microbiol 2021</a>
+									</p>
+								</div>
+								<div class="col">
+									<p style="text-align:center; font-size: 0.45em;">
+										<img height="200" data-src="../figures/trends-cover.gif">
+										<br><a href="https://www.sciencedirect.com/science/article/pii/S0968000421001390" target="_blank">
+											Hu et al., Trends Biochem Sci 2021</a>
+									</p>
+								</div>
+							</div>				
+						</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="font-size: larger;">Future research</h3>
+				<h4 style="font-size: larger;">Mechanobiology of bacteria</h4>
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Bacteria experience a variety of mechanical stimuli</h3>
+				<div class="r-stack">
+					<img height="500" data-src="../figures/wadhwa-lab-summary.png">
+					<img height="500" class="fragment " data-src="../figures/wadhwa-lab-summary-surface.png">
+					<img height="500" class="fragment " data-src="../figures/wadhwa-lab-summary-osmo.png">
+					<img height="500" class="fragment " data-src="../figures/wadhwa-lab-summary-flow.png">
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Bacteria sense surfaces before forming biofilms</h3>
+				<div class="container">
+					<div class="col">
+						<img height="280"  data-src="../figures/biofilm.jpg">
+						<p class="fragment" style="font-size: 0.6em;">How do single cells "know" they are on a surface?</p>		
+					</div>
+					<div class="col fragment">
+						<div class="r-stack">
+							<img height="350"  data-src="../figures/motor-signaling-1.png">
+							<img height="350" class="fragment" data-src="../figures/motor-signaling-2.png">
+							<img height="350" class="fragment " data-src="../figures/motor-signaling-3.png">
+							<img height="350" class="fragment " data-src="../figures/motor-signaling-4.png">
+						</div>
+					</div>
+				</div>
+				<h4 class="fragment">How does the flagellar motor sense surfaces?</h4>
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section style="color:darkblue;">
+				<h3 style="color:darkblue;">Bacteria live in a fluid environment</h3>
+					<img height="400"  src="../figures/bacteria-fluids.jpg">
+					<div class="text" style="text-align: right; font-size: 0.35em;">Roman Stocker lab</div>
+					<h4 class="fragment">How do bacteria sense flows?</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Flow sensing is common among aquatic organisms</h3>
+				<div class="container">
+					<div class="col">
+						<div class="r-stack">
+							<img height="350" data-src="../figures/old-work/copepod-attack.gif">
+							<img class="fragment" data-fragment-index="1" height="350" data-src="../figures/old-work/copepod-attack-still.bmp">
+						</div>
+						<p style="text-align:left; font-size: 0.45em;">
+							Thomas Kiørboe
+						</p>		
+					</div>
+
+					<div class="col">
+						<div class="r-stack">
+							<p class="fragment fade-in-then-out" data-fragment-index="1" style="text-align:right; font-size: 0.45em;">
+								<img height="330" data-src="../figures/PR-biobay.jpg">
+								<a href="http://www.frankly.com/biobay/" target="_blank">
+								Frank LLosa
+								</a>
+							</p>
+							<p class="fragment fade-in" style="text-align:right; font-size: 0.45em;">
+								<img height="330" data-src="../figures/lingulodinium-polyedrum.png">
+								<a href="https://tropicalstudies.org/rbt/attachments/suppls/sup49-2%20EACR%20II/03-MORALE.pdf" target="_blank">
+								<br>Morales-Ramírez et al., 2001
+								</a>
+							</p>	
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>Bacteria-flow interaction is a two-way street</h3>
+				<img height="450"  data-src="../figures/bacteria-flows.png">
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="https://www.annualreviews.org/doi/10.1146/annurev-chembioeng-060817-084006" target="_blank">
+						Conrad and Poling-Skutvik, 2018	</a>
+				</p>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>Flow sensing in single-cell organisms</h3>
+					<video controls data-autoplay data-src="../figures/life-of-pi.mp4"></video>
+					<p style="text-align:right; font-size: 0.45em;">
+						<a href="https://www.youtube.com/watch?v=rfVW1hZFMbc" target="_blank">
+						Life of Pi
+						</a>
+					</p>
+			</section>
+			<section data-visibility="uncounted">
+				<h3>Flow sensing in single-cell organisms</h3>
+				<img height="480" data-src="../figures/PR-biobay.jpg">
+				<p style="text-align:right; font-size: 0.45em;">
+					<a href="http://www.frankly.com/biobay/" target="_blank">
+					Image credit: Frank LLosa
+					</a>
+				</p>
+			</section> -->
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Flow sensing is common among aquatic organisms</h3>
+				<!-- <video controls data-autoplay data-src="../figures/siphon-naupli.wmv"></video> -->
+				<img height="480" data-src="../figures/siphon-naupli.gif">
+					<p style="text-align:right; font-size: 0.45em;">
+						Thomas Kiørboe
+					</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<!-- <h3>How do bacteria sense flows?</h3> -->
+				<!-- <div class="container"> -->
+					<!-- <div class="col"> -->
+						<img height="400"  data-src="../figures/bacteria-fluids.jpg">
+					<!-- </div> -->
+					<!-- <div class="col"> -->
+						<h4>How do bacteria sense flows?</h4>						
+					<!-- </div> -->
+				<!-- </div> -->
+
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>The flagellar motor is a bacteria mechanosensor</h3>
+				<div class="container">
+					<div class="col">
+						<img style="margin-bottom: 30px; margin-top: 50px;" height="100" data-src="../figures/flagella-mechano/Belas2013-1.png">
+						<img style="margin-bottom: 60px;" height="70" data-src="../figures/flagella-mechano/Toutain2007.png">
+						<img height="100" data-src="../figures/flagella-mechano/Watnick2001.png">
+					</div>
+					<div class="col">
+						<img style="margin-bottom: 30px; margin-top: 50px;" height="100" data-src="../figures/flagella-mechano/Cairns2013-2.png">
+						<img style="margin-bottom: 30px;" height="100" data-src="../figures/flagella-mechano/Kawagishi1996-2.png">
+						<img height="100" data-src="../figures/flagella-mechano/McCarter1988-1.png">
+					</div>
+				</div>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>Stator remodeling is the input to a signal transduction network</h3>
+				
+			</section> -->
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>How do bacteria sense surfaces?</h3>
+				<h4>Untangling the flagellar mechanosenisng pathway</h4>
+				<ul>
+					<li>Describe the approaches</li>
+					<li>Describe potential outcomes</li>
+				</ul>
+			</section> -->
+			
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3 style="color:darkblue;">Osmotic stress is a mechanical stress</h3>
+				<div class="container">
+					<div class="col">
+						<img height="400"  data-src="../figures/tonicitiy-iso.jpg">		
+					</div>
+					<div class="col fragment">
+						<img height="400"  data-src="../figures/tonicitiy_hypo.jpg">		
+					</div>
+					<div class="col fragment">
+						<img height="400"  data-src="../figures/tonicitiy_hyper.jpg">		
+					</div>
+				</div>
+				<p style="text-align:right; font-size: 0.4em;">
+					Wikipedia/User:EAGMIL, CC BY-SA 4.0
+				</p>
+			</section> -->
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Bacteria routinely face osmotic insults</h3>
+				<img class = "fragment" data-fragment-index="1" height="400"  data-src="../figures/gut-bacteria.jpg">
+				<p class="fragment" data-fragment-index="1" style="text-align:right; font-size: 0.3em;">
+					<a href="https://www.downtoearth.org.in/" target="_blank">
+					<br>Centre for Science and Environment
+					</a>
+				</p>
+				<h4 class="fragment">How do bacteria cope with osmotic shifts?</h4>
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>The flagellar motor is a biological voltmeter</h3>
+				<ul>
+					<li>Graphic for motor speed vs membrane potential</li>
+				</ul>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3>The cell depolarizes during osmotic upshipft</h3>
+				<ul>
+					<li>Data from single cell experiments</li>
+				</ul>
+			</section> -->
+
+			<!-- ########################################################## -->
+			<!-- <section>
+				<h3> How do bacterial cope with large osmotic upshifts?</h3>
+				<h4>Identifying the mechanisms of bacterial response to osmotic stress</h4>
+				<ul>
+					<li>Describe approaches</li>
+					<li>Discuss potential outcomes</li>
+				</ul>
+			</section> -->
+
+
+			
+
+			<!-- ########################################################## -->
+			<section>
+				<h3 style="color:darkblue;">Bacterial Mechanobiology lab</h3>
+				<div class="r-stack">
+					<img height="600" data-src="../figures/lab-summary-1.png">
+					<img class="fragment" height="600" data-src="../figures/lab-summary-2.png">
+					<img class="fragment" height="600" data-src="../figures/lab-summary-3.png">
+					<img class="fragment" height="600" data-src="../figures/lab-summary-4.png">
+					<!-- <img class="fragment" height="600" data-src="../figures/lab-summary-5.png"> -->
+				</div>
+				
+			</section>
+			
+			<!-- ########################################################## -->
+			<section>
+				<h3>Acknowledgements</h3>
+				<div class="container">
+					<div class="col">
+						<p style="font-size:0.4em;">
+							<img height="330" data-src="../figures/people/howard2.jpg">	
+							<br> Howard C. Berg (1934 - 2021)
+						</p>
+					</div>
+					<div class="col">
+						<div class="container">
+							<div class="col">				
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/rob.jpg">
+									<br>Rob Phillips (Caltech)
+								</p>
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/ethan.jpg">
+									<br>Ethan Garner (Harvard)
+								</p>
+							</div>
+							<div class="col">
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/yuhai.jpg">
+									<br>Yuhai Tu <br> (IBM)
+								</p>
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/alberto.jfif">
+									<br>Alberto Sassi (IBM)
+								</p>
+							</div>
+							<div class="col">
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/sophia.jpg">
+									<br>Sophia Belser (Cambridge)
+								</p>
+								
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/jinming.jpg">
+									<br>Jinming Yang (Yale)
+								</p>
+							</div>
+							<div class="col">
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/gong.jpg">
+									<br>Daozheng Gong (Chicago)
+								</p>
+								
+								<p style="font-size:0.35em;">
+									<img height="125" data-src="../figures/people/siyu.jpg">
+									<br>Siyu He (Columbia)
+								</p>
+							</div>
+						</div>
+						<div class="container">
+							<div class="col">
+								<img height="120" data-src="../figures/nigms-logo-500px.gif">
+							</div>
+							<div class="col">
+								<div class="container">
+									<div class="text">
+										<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+									</div>
+									<div class="image">
+									  <img height="30" data-src="../figures/twitter.jpg">
+									</div>
+									<div class="text">
+										<p style="font-size:0.5em;"><a href="https://twitter.com/NavishWadhwa" target="_blank">@NavishWadhwa</a></p>
+									</div>
+								</div>
+								<div class="container">
+									<div class="text">
+										<p style="font-size:0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+									</div>
+									<div class="image">
+									  <img height="30" data-src="../figures/web-icon.jpg">
+									</div>
+									<div class="text">
+										<p style="font-size:0.5em;"><a href="https://WadhwaLab.com" target="_blank">www.WadhwaLab.com</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+							
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Contributions</h3>
+				<div class="container">
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<img height="140" data-src="../figures/electro-example.gif">
+							<br>Used electrorotation to control motor load
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<img height="140" data-src="../figures/electro-example-with-steps.png">
+							<br>Measured remodeing in single flagellar motors
+						</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<img height="180" data-src="../figures/model-fit.png">
+							<br>Modeled population-averaged kinetics of motor remodeling
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<img height="180" data-src="../figures/data-collapse.png">
+							<br>Validated the model in CW rotating motors
+						</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
+								Wadhwa et al., PNAS 2019</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
+								Wadhwa et al., PNAS 2021</a>
+						</p>
+					</div>
+					<div class="col">
+						<p style="text-align:center; font-size: 0.45em;">
+							<a href="https://www.biorxiv.org/content/10.1101/2021.12.22.473861v2.full" target="_blank">
+								Wadhwa*, Sassi* et al., Nat Comm (<i>in revision</i>)
+							</a>
+							</p>
+					</div>
+				</div>				
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				
+			</section>
+
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Reversal of flagellar rotation enables changes in the swimming direction</h3>
+				<img height="200" src="../figures/tumble-images.png">
+				<img style="margin-left: 250px;" height="200" src="../figures/tumble-schematic.png">	
+				<p style="text-align:left; font-size: 0.45em;">
+					<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., <b>J. Bacteriol.</b>, 2000</a>
+				</p>
+			</section>
+
+			<!-- ########################################################## -->
+			<section>
+				<h3>Changes in the rotor enable bidirectional rotation</h3>
+				<div class="container">
+					<div class="col">
+						<img height="180" src="../figures/CCW-motor.png" >
+						<img height="190" class="fragment" src="../figures/CW-motor.png" >
+					</div>
+					<div class="col">
+						<div class="fragment">
+							<br>
+							<video controls height="350">
+								<source src="https://static-content.springer.com/esm/art%3A10.1038%2Fs41594-020-0497-2/MediaObjects/41594_2020_497_MOESM9_ESM.mp4#t=36,70" type="video/mp4">
+							</video>
+						<p style="text-align:right; font-size: 0.45em;">
+							<a href="https://www.nature.com/articles/s41594-020-0497-2" target="_blank">Chang et al., <b>Nat. Struct. Mol. Biol</b>, 2020</a>  
+						</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="../reveal.js/dist/reveal.js"></script>
+	<script src="../reveal.js/plugin/math/math.js"></script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
+	<script>
+		Reveal.initialize({
+
+			center: true,
+			history: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			math: {
+				// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				TeX: {
+					Macros: {
+						R: '\\mathbb{R}',
+						set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+					}
+				}
+			},
+
+			plugins: [RevealMath]
+		});
+
+	</script>
+
+
+
+</body>
+
+</html>
