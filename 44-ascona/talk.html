@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Wadhwa — Experimental Evolution of Flagellar Motility — Ascona 2026</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/dist/theme/nw.css" id="theme">
+</head>
+
+<style type="text/css">
+	code {
+		white-space: pre;
+	}
+
+	.MathJax_CHTML {
+		color: rgb(100, 100, 100);
+		font-size: 100% !important;
+	}
+
+	.container {
+		display: flex;
+	}
+
+	.col {
+		flex: 1;
+	}
+
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	/* Placeholder box for figures not yet rendered / data not yet in repo */
+	.placeholder {
+		border: 3px dashed #b0b0b0;
+		color: #777;
+		background: #f6f6f6;
+		padding: 24px 28px;
+		font-size: 0.5em;
+		line-height: 1.4;
+		display: inline-block;
+		border-radius: 10px;
+		text-align: left;
+		max-width: 80%;
+	}
+
+	.placeholder b { color: #c0392b; }
+	.placeholder .path { font-family: monospace; color: #2c3e50; }
+</style>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- ============================================================ -->
+			<!-- SLIDE 1 — Title -->
+			<!-- ============================================================ -->
+			<section>
+				<div class="container">
+					<div class="col">
+						<h4>Experimental evolution reveals distinct flagellar strategies for enhanced motility in complex environments</h4>
+						<img style="height:230px;" src="../figures/logo-no-text.png">
+						<p style="font-size:0.85em;">
+							<u>Seiga Yanagisawa</u>, Wayne Frasch, and <b>Navish Wadhwa</b><br>
+							Arizona State University<br>
+							<a href="https://twitter.com/WadhwaLab" target="_blank">@WadhwaLab</a>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- SLIDE 2 — Bacteria navigate structured environments -->
+			<!-- ============================================================ -->
+			<section>
+				<h3>Bacteria don't live in buffer</h3>
+				<div class="container">
+					<div class="col">
+						<img height="200" data-src="../figures/gut.png">
+						<img height="200" data-src="../figures/soil.png">
+					</div>
+					<div class="col">
+						<img height="200" data-src="../figures/pond.png">
+						<img height="200" data-src="../figures/pipe.png">
+					</div>
+				</div>
+				<p>Their world is viscous, crowded, and structured</p>
+				<p class="fragment" style="font-size:0.7em;">For a pathogen, these structured environments are the host &mdash; the mucus, tissue, and gut it must move through to establish infection</p>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- SLIDE 3 — Flagella power motility, but how is it tuned? -->
+			<!-- ============================================================ -->
+			<section>
+				<h3>Bacteria swim by rotating helical flagella</h3>
+				<div class="container">
+					<div class="col">
+						<p style="text-align:left; font-size: 0.55em;">
+							<img data-src="../figures/fluo-bundle.gif"> Slowed down 20X
+						</p>
+					</div>
+					<div class="col">
+						<br><br>
+						<img height="120" data-src="../figures/swimming-schematic.png">
+					</div>
+				</div>
+				<h4 class="fragment">We understand swimming in liquid &mdash; far less about motility in viscous, structured environments. What tunes it there?</h4>
+				<p style="text-align:left; font-size: 0.45em;">
+					<a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., <i>J. Bacteriol.</i> 2000</a>
+				</p>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- PART 1 — Experiment, controls, puzzle -->
+			<!-- ============================================================ -->
+
+			<!-- SLIDE 4 — Experimental evolution selects for soft-agar motility -->
+			<section>
+				<h3>Experimental evolution selects for enhanced motility in soft agar</h3>
+				<br>
+				<div class="container r-stack">
+					<img height="300" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/directed-evolution/dee-1.png">
+					<img height="300" class="fragment fade-in-then-out" data-fragment-index="2" data-src="../figures/directed-evolution/dee-2.png">
+					<img height="300" class="fragment fade-in-then-out" data-fragment-index="3" data-src="../figures/directed-evolution/dee-3.png">
+					<img height="300" class="fragment fade-in-then-out" data-fragment-index="4" data-src="../figures/directed-evolution/dee-4.png">
+					<img height="300" class="fragment fade-in" data-fragment-index="5" data-src="../figures/directed-evolution/dee-5.png">
+				</div>
+				<!-- TODO: REBUILD from Seiga's higher-quality selection images (current dee-1..5 is a placeholder). Parallel WT and dmutL hypermutator backgrounds. -->
+			</section>
+
+			<!-- SLIDE 5 — Motility rapidly and heritably enhanced -->
+			<section>
+				<h3>Motility is rapidly and heritably enhanced</h3>
+				<div class="r-stack">
+					<!-- Visual lead-in: 20 rounds of expanding halos -->
+					<img height="460" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/directed-evolution/dee-20.png">
+					<!-- Then the quantitative 3-step build -->
+					<div class="fragment fade-in" data-fragment-index="2">
+						<div class="placeholder">
+							<b>FIGURE — render staged build:</b><br>
+							1. Halo radius vs selection round, all WT lines (monotonic rise)<br>
+							2. Overlay &Delta;<i>mutL</i> hypermutator lines (gain more, faster)<br>
+							3. Frozen-stock heritability (re-inoculation retains enlarged halos)<br>
+							<span class="path">halo-area-vs-selection-round.pdf</span> (panels 1&ndash;2, rendered)<br>
+							Panel 3 frozen-stock: <b>data pending from Seiga</b>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 6 — Growth-rate control -->
+			<section>
+				<h3>It's not just faster growth</h3>
+				<p style="font-size:0.8em;">Evolved lines don't grow faster in liquid &mdash; bigger halos aren't a growth-rate artifact</p>
+				<div class="placeholder">
+					<b>FIGURE — copy rendered panel:</b> liquid TB growth curves + max-growth-rate summary.
+					Hypermutator-derived lines match or grow <i>slower</i> than ancestor.<br>
+					<span class="path">outputs/figure-panels/growth-curves/growth-curves-and-rates.pdf</span>
+				</div>
+				<p style="font-size:0.55em;">Rules out a uniform shift in intrinsic growth rate (not in-agar growth-coupled expansion)</p>
+			</section>
+
+			<!-- SLIDE 7 — WGS genetic basis (PLACEHOLDER) -->
+			<section>
+				<h3>Selection repeatedly targets the flagellar system</h3>
+				<div class="container">
+					<div class="col">
+						<p style="font-size:0.7em;"><b>Number route</b><br>
+							<span style="font-size:0.85em;"><i>flhDC</i> promoter mutations</span></p>
+					</div>
+					<div class="col">
+						<p style="font-size:0.7em;"><b>Shape route</b><br>
+							<span style="font-size:0.85em;"><i>fliC</i> A438V / N441S</span></p>
+					</div>
+					<div class="col">
+						<p style="font-size:0.7em;"><b>Chemotaxis</b><br>
+							<span style="font-size:0.85em;"><i>cheZ / cheW / cheR</i></span></p>
+					</div>
+				</div>
+				<div class="placeholder">
+					<b>PLACEHOLDER — WGS data not in repo.</b> Awaiting processed mutation table from postdoc.
+					If it doesn't arrive, cut this slide &mdash; plasmid complementation carries the causal claim.
+				</div>
+			</section>
+
+			<!-- SLIDE 8 — The puzzle: liquid speed != structured motility -->
+			<section>
+				<h3>Swimming speed in liquid does not predict motility in structured environments</h3>
+				<div class="placeholder">
+					<b>FIGURE — copy rendered panel:</b> mean-speed heatmap (normalized to WT ancestor) for
+					WT ancestor + <i>mutL</i> C11A + <i>mutL</i> 20A/20B/20C across 0&ndash;35% Ficoll,
+					with representative distributions (WT, 20B, C11A) at 10% Ficoll.<br>
+					<span class="path">outputs/figure-panels/swim-speed-ficoll-summary/swim-speed-ficoll-summary.pdf</span>
+				</div>
+				<p style="font-size:0.65em;"><i>mutL</i> 20B swims faster, <i>mutL</i> C11A swims slower &mdash; yet both make larger halos</p>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- PART 2 — Route 1: flagellar number -->
+			<!-- ============================================================ -->
+
+			<!-- SLIDE 9 — Selection drives morphological change -->
+			<section>
+				<h3>Selection drives morphological change</h3>
+				<br>
+				<img height="330" data-src="../figures/directed-evolution/em.png">
+				<p style="font-size:0.6em;">Evolved cells differ in flagellar number <i>and</i> filament shape &mdash; two routes</p>
+			</section>
+
+			<!-- SLIDE 10 — mutL 20B has more flagella -->
+			<section>
+				<h3><span style="color: #1D75BC"><i>mutL</i> 20B</span> has more flagella</h3>
+				<div>
+					<img height="200" data-src="../figures/directed-evolution/wt-mutantA-em.png">
+				</div>
+				<div class="fragment">
+					<img height="330" data-src="../figures/directed-evolution/flagella-counts.png">
+				</div>
+				<!-- Keep 20B (number) distinct from C11A (shape). Do NOT claim C11A == WT. -->
+			</section>
+
+			<!-- SLIDE 11a — More flagella improve migration -->
+			<section>
+				<h3>More flagella improve motility in soft agar</h3>
+				<div class="container">
+					<div class="col">
+						<img height="330" data-src="../figures/directed-evolution/IPTG-sketch.png">
+						<p style="font-size:0.5em;">Inducible <i>Ptac::flhDC</i>: IPTG tunes flagellar number (~1&ndash;18/cell)</p>
+					</div>
+					<div class="col fragment">
+						<div class="placeholder">
+							<b>ADD premise panel:</b> flagella per cell vs [IPTG]<br>
+							<span class="path">2026-05-06 Number of flagella per cell - VS1638 strain ...py</span> (render)
+						</div>
+					</div>
+					<div class="col fragment">
+						<img height="300" data-src="../figures/directed-evolution/IPTG-data.png">
+						<p style="font-size:0.5em;">More flagella &rarr; bigger halos</p>
+					</div>
+				</div>
+				<p style="font-size:0.5em;">More flagella also give faster runs and straighter swimming (smaller reorientation angle). Strain courtesy of <b>Victor Sourjik</b>. <span style="color:#c0392b;">[confirm strain: VS1638 vs VS1683]</span></p>
+			</section>
+
+			<!-- SLIDE 11b — Viscosity-dependent optimum, not a speed effect -->
+			<section>
+				<h3>The best flagellar number depends on viscosity</h3>
+				<div class="container">
+					<div class="col">
+						<div class="placeholder">
+							<b>FIGURE — copy rendered:</b> halo across IPTG &times; Ficoll.
+							Peak shifts to lower induction 0%&rarr;5%; collapses at 10% (38&rarr;28&rarr;12 cm&sup2;).<br>
+							<span class="path">halo-area-vs-iptg_vs1683.pdf (+ _heatmap, _peak-halo)</span>
+						</div>
+					</div>
+					<div class="col fragment">
+						<div class="placeholder">
+							<b>FIGURE — render:</b> swim speed across IPTG &times; Ficoll &mdash; speed
+							<i>saturates</i> with induction, so the high-IPTG halo decline is not a speed effect.<br>
+							<span class="path">2026-02-16_VS1683_swim_speed</span>
+						</div>
+					</div>
+				</div>
+				<p style="font-size:0.55em;">Optimum drops with viscosity; at high viscosity the benefit collapses &mdash; a structured-environment-specific cost of too many flagella</p>
+			</section>
+
+			<!-- SLIDE 11c — Transition divider -->
+			<section>
+				<h2 style="font-size:1.1em;">More flagella help &mdash; with a viscosity-tuned optimum</h2>
+				<h3 class="fragment" style="color:#888;">&hellip; but that's only one of two routes</h3>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- PART 3 — Route 2: filament shape switching -->
+			<!-- ============================================================ -->
+
+			<!-- SLIDE 12 — Selection drives higher filament curvature -->
+			<section>
+				<h3>A second route: selection drives higher filament curvature</h3>
+				<br>
+				<img height="330" data-src="../figures/directed-evolution/wt-mutantB.png">
+				<p style="font-size:0.6em;">This line does <i>not</i> have more flagella &mdash; a different mechanical solution</p>
+			</section>
+
+			<!-- SLIDE 13 — A single FliC mutation is sufficient -->
+			<section>
+				<h3>A single flagellin mutation, A438V, raises curvature and enlarges halos</h3>
+				<div class="container r-stack">
+					<img height="480" data-src="../figures/directed-evolution/wt-mutantB-plasmid.png">
+					<img height="480" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/directed-evolution/wt-mutantB-plasmid-plate.png">
+				</div>
+				<p style="font-size:0.55em;">Plasmid complementation in &Delta;<i>fliC</i> isolates one residue as causal</p>
+			</section>
+
+			<!-- SLIDE 14 — The inversion -->
+			<section>
+				<h3>A438V swims <i>slower</i> in liquid yet migrates <i>better</i> in agar</h3>
+				<div class="container">
+					<div class="col">
+						<div class="placeholder">
+							<b>FIGURE — render WT vs A438V only (exclude N441S):</b> halo at 0% / 10% Ficoll
+							(~1.7&times; &rarr; ~3.4&times; WT). Advantage grows with viscosity.<br>
+							<span class="path">halo-area_flic-mutants (re-render)</span>
+						</div>
+					</div>
+					<div class="col fragment">
+						<div class="placeholder">
+							<b>FIGURE — render WT vs A438V only:</b> swim speed vs Ficoll &mdash; A438V slower at every viscosity.<br>
+							<span class="path">2025-03-26_fliC_WT_vs_A438V_vs_N441S</span>
+						</div>
+					</div>
+				</div>
+				<h4 class="fragment">The adaptive object is not speed &mdash; it's the propeller's shape</h4>
+			</section>
+
+			<!-- SLIDE 15 — Polymorphism primer -->
+			<section>
+				<h3>Flagellar filaments are polymorphic &mdash; switching is already part of normal motility</h3>
+				<img height="380" data-src="../figures/directed-evolution/wt-twist.png">
+				<p style="font-size:0.55em;">WT filaments already switch Normal (run) &harr; Semi-coiled/Curly (tumble) to unbundle. A438V is an <b>evolved exaggeration of a switch cells already use</b>.</p>
+			</section>
+
+			<!-- SLIDE 16 — The switch -->
+			<section>
+				<h3>A438V is a rotation-driven shape switch</h3>
+				<div class="container">
+					<div class="col">
+						<img height="380" data-src="../figures/directed-evolution/mutant-twist.png">
+					</div>
+					<div class="col fragment">
+						<p style="font-size:0.5em;">A438V rotating</p>
+						<img height="300" data-src="../figures/directed-evolution/filament-mutants/2025-07-18 A438V-S219C_1 - rotating.gif">
+					</div>
+				</div>
+				<p style="font-size:0.55em;">Semi-coiled at rest &rarr; Normal under rotation &rarr; snaps back when rotation stops or reverses</p>
+			</section>
+
+			<!-- SLIDE 17 — Design rules at the beta-hairpin -->
+			<section>
+				<h3>A programmable switch: design rules at the &beta;-hairpin</h3>
+				<div class="container">
+					<div class="col">
+						<img width="280" data-src="../figures/directed-evolution/fliC-structure.png">
+						<p style="font-size:0.45em;">Residue size at the C-D1 / &beta;-hairpin interface predictably walks the waveform Normal &rarr; Semi-coiled &rarr; Curly</p>
+					</div>
+					<div class="col">
+						<div class="container">
+							<div class="col"><p style="font-size:0.4em;"><img width="150" data-src="../figures/directed-evolution/filament-mutants/WT fliC.png"><br>WT</p></div>
+							<div class="col"><p style="font-size:0.4em;"><img width="150" data-src="../figures/directed-evolution/filament-mutants/A438V.png"><br>A438V</p></div>
+							<div class="col"><p style="font-size:0.4em;"><img width="150" data-src="../figures/directed-evolution/filament-mutants/V148L.png"><br>V148L (Curly-locked)</p></div>
+						</div>
+						<div class="fragment">
+							<p style="font-size:0.5em;">Curly-locked (V148L / I156L) can't switch &rarr; non-motile, swims backward</p>
+							<img height="160" data-src="../figures/directed-evolution/filament-mutants/2025-07- V148L-S219C_003.gif">
+						</div>
+					</div>
+				</div>
+				<p style="text-align:left; font-size: 0.4em;">
+					Matches naturally Curly-locked <i>E. coli</i> ATCC10798 (<i>fliC</i> N87K),
+					<a href="https://doi.org/10.1038/s41598-020-72429-1" target="_blank">Kinosita et al., <i>Sci. Rep.</i> 2020</a>
+				</p>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- PART 4 — Close -->
+			<!-- ============================================================ -->
+
+			<!-- SLIDE 18 — Summary -->
+			<section>
+				<h3>Evolution tunes the flagellum as a mechanical system, not for raw speed</h3>
+				<div class="container">
+					<div class="col">
+						<p class="fragment fade-in" data-fragment-index="1" style="text-align:left;font-size:0.7em;"><b>Number</b> &mdash; more flagella, faster runs / straighter swimming; optimum is viscosity-dependent</p>
+						<p class="fragment fade-in" data-fragment-index="2" style="text-align:left;font-size:0.7em;"><br><b>Shape</b> &mdash; a flagellin switch (A438V) that trades liquid speed for structured-environment migration; necessary and finely tuned</p>
+						<p class="fragment fade-in" data-fragment-index="3" style="text-align:left;font-size:0.7em;"><br>Liquid swimming speed does not determine motility in complex environments</p>
+						<p class="fragment fade-in" data-fragment-index="4" style="text-align:left;font-size:0.6em;color:#555;"><br>Implication for infection: how pathogens may tune flagellar function to move through host tissue</p>
+					</div>
+					<div class="col">
+						<img class="fragment fade-in" data-fragment-index="1" height="330" data-src="../figures/directed-evolution/em-conclusions.png">
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 19 — Acknowledgements -->
+			<section>
+				<h3>Acknowledgements</h3>
+				<div class="container">
+					<div class="col">
+						<p style="text-align:left;font-size: 0.48em;">
+							<u><b>Wadhwa lab</b></u><br>
+							<b><mark>Dr. Seiga Yanagisawa</mark></b><br>
+							Dr. Mrinmayee Bapat<br>
+							Dr. Farhad Javi<br>
+							Shabduli Sawant<br>
+							Luis Meneses<br>
+							Brennen Wise<br>
+							<br>
+							<u><b>Collaborators</b></u><br>
+							Wayne Frasch (ASU)<br>
+							Banu Ozkan (ASU)<br>
+							<b>Victor Sourjik (MPI Marburg)</b> &mdash; <i>Ptac::flhDC</i> strain<br>
+						</p>
+					</div>
+					<div class="col">
+						<p style="font-size:0.5em;"><img height="320" data-src="../figures/people/LabPhoto-Nov-4-25.jpg"><br>
+							<a href="https://twitter.com/WadhwaLab" target="_blank">@WadhwaLab</a><br>
+							<a href="https://wadhwalab.com" target="_blank">www.wadhwalab.com</a></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="col"><img height="60" data-src="../figures/biodesign.jpg"></div>
+					<div class="col"><img height="120" data-src="../figures/nih-logo.jpg"></div>
+					<div class="col"><img height="120" data-src="../figures/ADHS-ABRC.png"></div>
+				</div>
+			</section>
+
+			<!-- ============================================================ -->
+			<!-- SUPPLEMENTAL / Q&A backup slides -->
+			<!-- ============================================================ -->
+
+			<!-- S1 — N441S specificity -->
+			<section data-visibility="uncounted">
+				<h3>N441S: a near-twin that doesn't help</h3>
+				<div class="placeholder">
+					<b>FIGURE:</b> WT / A438V / N441S halo + swim speed.
+					N441S raises curvature and switches like A438V, yet gives no halo advantage and isn't slower in liquid.<br>
+					<span class="path">halo-area_flic-mutants.pdf + 2025-03-26 swim data</span>
+				</div>
+				<p style="font-size:0.55em;">Only difference found: slightly different twist (&Delta;&tau; &asymp; 3.7 vs 4.7 &micro;m&#8315;&sup1;). The benefit depends on the precise twist, not on switching per se &mdash; still open.</p>
+			</section>
+
+			<!-- S2 — Waveform and speed don't predict structured motility (V148I) -->
+			<section data-visibility="uncounted">
+				<h3>Waveform and liquid speed alone don't predict soft-agar motility</h3>
+				<div class="placeholder">
+					<b>FIGURE:</b> &beta;-hairpin mutant motility + swim speed.
+					V148I: Semi-coiled filament, normal liquid speed, yet reduced soft-agar motility.
+					V148A-A438V reverts to Normal but swims slow; I156V-A438V reverts to Normal and swims WT-fast.<br>
+					<span class="path">2025-09-19_fliC_beta_hairpin_mutants_swimming</span>
+				</div>
+			</section>
+
+			<!-- S3 — Inducible strain reproduces evolved kinematics -->
+			<section data-visibility="uncounted">
+				<h3>Inducible strain reproduces the evolved kinematic signature</h3>
+				<div class="placeholder">
+					<b>FIGURE:</b> run-and-tumble vs IPTG &mdash; run-phase speed &uarr;, reorientation angle &darr;,
+					tumble frequency and durations unchanged. Same shift seen in <i>mutL</i> 20B &mdash; isolates it as flagellar number.<br>
+					<span class="path">manuscript/figures/supp/run-tumble-vs1638-1.pdf, -2.pdf</span>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="../reveal.js/dist/reveal.js"></script>
+	<script src="../reveal.js/plugin/math/math.js"></script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+	</script>
+	<script>
+		Reveal.initialize({
+			center: true,
+			history: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			plugins: [RevealMath]
+		});
+	</script>
+
+</body>
+
+</html>
