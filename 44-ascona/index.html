@@ -37,6 +37,23 @@
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
+
+	/* Placeholder box for figures / photos not yet added */
+	.placeholder {
+		border: 3px dashed #b0b0b0;
+		color: #777;
+		background: #f6f6f6;
+		padding: 24px 28px;
+		font-size: 0.5em;
+		line-height: 1.4;
+		display: inline-block;
+		border-radius: 10px;
+		text-align: center;
+		max-width: 80%;
+	}
+
+	.placeholder b { color: #c0392b; }
+	.placeholder .path { font-family: monospace; color: #2c3e50; }
 </style>
 
 <body>
@@ -47,57 +64,55 @@
 			<section>
 				<div class="container">
 					<div class="col">
-						<h4>
-							Experimental Evolution for Enhanced Bacterial Motility in Complex Environments
-						</h4>
-							<img style="height:270px;" src="../figures/logo-no-text.png">							
-						<p><b>Navish Wadhwa</b>
-						<br>Arizona State University<br>
-						
-						<a href="https://twitter.com/WadhwaLab" target="_blank">@WadhwaLab</a></p>
+						<h4>Experimental evolution reveals distinct flagellar strategies for enhanced motility in complex environments</h4>
+						<img style="height:230px;" src="../figures/logo-no-text.png">
+						<p style="font-size:0.85em;">
+							<b>Navish Wadhwa</b><br>
+							Arizona State University<br>
+							<a href="https://twitter.com/WadhwaLab" target="_blank">@WadhwaLab</a>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ########################################################## -->
+			<!-- Credit slide — work led by Seiga -->
+			<section>
+				<h3>This work was led by Seiga Yanagisawa</h3>
+				<div class="container">
+					<div class="col">
+						<div class="placeholder" style="height:340px; width:280px; display:flex; align-items:center; justify-content:center;">
+							PHOTO — Seiga Yanagisawa<br>(drop image into figures/people/seiga.jpg)
+						</div>
+					</div>
+					<div class="col">
+						<div class="vertical-center">
+							<p style="text-align:left; font-size:0.8em;">Dr. Seiga Yanagisawa<br>
+							<span style="font-size:0.8em;">Postdoctoral Researcher, Wadhwa Lab</span></p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 <section>
-	<h3>Bacteria thrive everywhere</h3>
+	<h3>Bacteria don't live in buffer</h3>
 	<div class="container">
 		<div class="col">
+			<img height="200" data-src="../figures/gut.png">
 			<img height="200" data-src="../figures/soil.png">
-			<img height="200" data-src="../figures/pond.png">
 		</div>
 		<div class="col">
-			<img height="200" data-src="../figures/gut.png">
+			<img height="200" data-src="../figures/pond.png">
 			<img height="200" data-src="../figures/pipe.png">
 		</div>
 	</div>
-	<p>Their world is crowded, viscous, and ever-changing</p>
+	<p>Their world is viscous, crowded, and structured</p>
 </section>
 
 <!-- ########################################################## -->
-<section>
-	<h3>Flagella power bacterial motility</h3>
-	<div class="container">
-		<div class="col">
-			<img height="500" data-src="../figures/e-coli.png">
-		</div>
-		<!-- <div class="col">
-			<div class="vertical-center">
-				<p style="text-align:left;"><br>Inhabits guts of mammals</p>
-				<p style="text-align:left;"><br>Some strains are harmful, most harmless</p>
-				<p style="text-align:left;"><br>Multiple flagella per cell</p>
-			</div>
-		</div> -->
-	</div>
-	<p style="text-align:left; font-size: 0.45em;">
-		<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., 2000</a>
-	</p>
-</section>
-
-
 <!-- ########################################################## -->
 <section>
-	<h3>Bacteria swim by rotating helical flagella</h3>
+	<h3>In liquid, bacteria swim by rotating helical flagella</h3>
 	
 	<div class="container">
 		<div class="col">
@@ -113,6 +128,7 @@
 			</div>
 		</div>
 	</div>
+	<h4 class="fragment">What tunes motility in viscous, structured environments?</h4>
 	<p style="text-align:left; font-size: 0.45em;">
 		<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., <i>J Bact</i> 2000</a>
 	</p>
@@ -128,118 +144,12 @@
 	</p> -->
 </section>
 
-<!-- ########################################################## -->
-<section>
-	<h3 style="font-size: 1em;">Physics of swimming 101</h3>
-	<img style="margin:10px 100px" class="fragment" height="200" data-src="../figures/colloquium/Reynolds-parameters.png">
-	<img style="margin:10px 150px" class="fragment" height="200" data-src="../figures/colloquium/ratio-forces.png">
-	<img style="margin:10px 100px"  class="fragment" height="70" data-src="../figures/colloquium/reynolds.png">
-	<p style="text-align:left; font-size: 0.45em;">
-		<br><a href="https://aapt.scitation.org/doi/10.1119/1.10903" target="_blank">Purcell, Am J Phys 1977</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3 style="font-size: 1em;">Reynolds number spans orders of magnitude across organism sizes</h3>
-	<div class="container">
-		<div class="col">
-			<img style="margin:50px 100px" height="80" data-src="../figures/colloquium/reynolds.png">			
-		</div>
-		<div class="col">
-			<img style="vertical-align:middle;margin:50px 50px" class = "fragment" height="170" data-src="../figures/colloquium/re-human.png">	
-			<img style="vertical-align:middle;margin:00px 00px" class = "fragment" height="220" data-src="../figures/colloquium/re-bacterium.png">				
-		</div>
-	</div>
-
-	<p style="text-align:left; font-size: 0.45em;">
-		<br><a href="https://aapt.scitation.org/doi/10.1119/1.10903" target="_blank">Purcell, Am J Phys 1977</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3 style="font-size: 1em;">At low Reynolds number, reversible motion gets you nowhere</h3>
-	<div class="fragment">
-		<img style="margin:0px 0px" height="200" data-src="../figures/colloquium/scallop-theorem.png">
-	</div>
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3 style="font-size: 1em;">Two strategies for swimming at small scales</h3>
-	<div class="container">
-
-	<div class="col">
-		<img height="250" data-src="../figures/fluo-bundle.gif">	
-	</div>
-	<div class="col">
-		<img height="270" data-src="../figures/chlamy.gif">
-
-	</div>
-	</div>
-	<p style="text-align:left; font-size: 0.45em;">
-					<br><br><a href="" target="_blank">Turner et al., 2000</a>; <a href="" target="_blank">Wan and Goldstein, 2016</a>
-	</p>
-</section>
-
 			
-<!-- ########################################################## -->
-<section>
-	<h3>A nanoscale rotary motor drives flagellar rotation</h3>
-	<!-- Remove old cryo structure and add new one. Move stator dynamics to next slide -->
-	<div class="col">
-			<div class="r-stack">
-			<img height="550" data-src="../figures/swimming-ecoli.png">
-			<img height="550" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom.png">
-			<img height="550" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom-cryo.png">
-			<!-- <img height="550" class="fragment fade-in" data-src="../figures/swimming-ecoli-motor-zoom-turnover.png"> -->
-	</div>
-	<p style="text-align:left; font-size: 0.45em;">
-		<a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank"><u>NW</u> and Berg, <i>Nat. Rev. Microbiol.</i> 2021;</a>
-		<a href="https://pubmed.ncbi.nlm.nih.gov/33882274/" target="_blank">Tan et al., <i>Cell</i> 2021</a> 
-	</p>
-	<!-- </div> -->
-		<!-- <div class="col">
-			<br><br><br><br>
-			<div class="fragment">
-			<img height="210" data-src="../figures/stator-exchange.png">
-			<p style="text-align:right; font-size: 0.45em;">
-				<br><br><br><a href="https://www.nature.com/articles/nature05135" target="_blank">Leake et al., <b>Nature</b>, 2006</a>  
-			</p>
-			</div>
-		</div> -->
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h4>Flagellar number and geometry tune motility in complex environments</h4>
-	<br><p style="text-align:left; font-size: 0.45em;">
-		<a href="" target="_blank">
-			with Seiga Yanagisawa and Wayne Frasch</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3>Bacteria don't live in buffer</h3>
-	<div class="container">
-		<div class="col">
-			<img height="200" data-src="../figures/soil.png">
-			<img height="200" data-src="../figures/pond.png">
-		</div>
-		<div class="col">
-			<img height="200" data-src="../figures/gut.png">
-			<img height="200" data-src="../figures/pipe.png">
-		</div>
-	</div>
-	<h4 class="fragment">How do cells tune motility in complex environments?</h4>
-</section>
 
 
 <!-- ########################################################## -->
 <section>
-	<h3>Directed evolution selects for enhanced motility in soft agar</h3>
+	<h3>Experimental evolution selects for enhanced motility in soft agar</h3>
 	<br>
 	<div class="container r-stack">
 			<img height="300" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/directed-evolution/dee-1.png">
@@ -252,7 +162,7 @@
 
 <!-- ########################################################## -->
 <section>
-	<h3>Directed evolution rapidly enhances motility in soft agar</h3>
+	<h3>Experimental evolution rapidly enhances motility in soft agar</h3>
 		<img height="500" data-src="../figures/directed-evolution/dee-20.png">
 </section>
 
@@ -452,259 +362,6 @@
 </section>	
 
 <!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h4>Part III. Surface motility without flagellar propulsion</h4>
-	<br><p style="text-align:left; font-size: 0.45em;">
-		<a href="" target="_blank">
-			with David Blair and Justin Panich (Utah)</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<!-- <section>
-	<h3>Physical forces influence bacterial motility</h3>
-	<p style="font-size: 0.75em;">
-		<img height="450" data-src="../figures/swimming.gif"> <br><i>E. coli</i> swimming in liquid
-	</p>
-</section> -->
-
-<!-- ########################################################## -->
-<section>
-	<h3>In liquid, flagellar hydrodynamics drive motility</h3>
-	
-	<div class="container">
-		<div class="col">
-									
-			<p style="text-align:left; font-size: 0.55em;">
-				<img data-src="../figures/fluo-bundle.gif"> Slowed down 20X	
-			</p>
-		</div>
-		<div class="col">
-			<br><br>
-			<div>
-			<img height="140" data-src="../figures/swimming-forces-new.png">
-			</div>
-		</div>
-	</div>
-	<p style="text-align:left; font-size: 0.45em;">
-		<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">Turner et al., 2000</a>
-	</p>
-</section>
-
-<section>
-	<h3>On surfaces, motility is far more complex</h3>
-	<div class="container">
-		<div class="col fragment">
-			<img height="240" data-src="../figures/surfing/swarm-full.jpg">
-			<img class="fragment" height="240" data-src="../figures/surfing/swarm-zoom.jpg">
-			<p style="text-align:left; font-size: 0.45em;">
-			<a href="" target="_blank">Partridge and Harshey, 2023 </a>
-			</p>
-		</div>
-		<div class="col fragment">
-			<p style="text-align:right; font-size: 0.45em;">
-				<img height="400" data-src="../figures/surfing/berg_swarm_4h_1.gif"><br><a href="" target="_blank">
-					Howard Berg lab </a>
-			</p>
-		</div>
-
-	</div>
-	
-
-</section>
-
-<!-- <section>
-	<h3>Physical forces govern bacterial surface migration</h3>
-	<div class="r-stack">
-		<img height="500" class="fragment" data-fragment-index="1" data-src="../figures/surfing/forces-1.png">
-		<img height="500" class="fragment" data-fragment-index="2" data-src="../figures/surfing/forces-2.png">
-		<img height="500" class="fragment" data-fragment-index="3" data-src="../figures/surfing/forces-3.png">
-		<img height="500" class="fragment" data-fragment-index="4" data-src="../figures/surfing/forces-4.png">
-	</div>
-	<p style="text-align:left; font-size: 0.45em;">
-		<a href="https://doi.org/10.1063/5.0128140" target="_blank">
-			Bru et al., <i>Biophys. Rev.</i> 2023 </a>
-	</p>
-</section> -->
-
-<!-- <section>
-	<h4 style="font-size: larger;">Which physical factors matter most?</h4>
-</section> -->
-
-<!-- ########################################################## -->
-<section>
-	<h3>Surface migration does not require flagellar propulsion </h3>
-		<div class="container">
-			<div class="col"> 
-				<div class="r-stack">
-					<img height="500" class="fragment" data-fragment-index="1" data-src="../figures/surfing/salmo-motor.png">
-					<img height="500" class="fragment" data-fragment-index="2" data-src="../figures/surfing/salmo-flic-fljb.png">
-					<img height="500" class="fragment" data-fragment-index="3" data-src="../figures/surfing/salmo-flgk.png">
-					<!-- <img height="500" class="fragment" data-fragment-index="4" data-src="../figures/surfing/salmo-motor.png"> -->
-					<!-- <img height="500" class="fragment" data-fragment-index="4" data-src="../figures/surfing/salmo-mota-flgk.png">
-					<img height="500" class="fragment" data-fragment-index="5" data-src="../figures/surfing/salmo-mota-flic-fljb.png"> -->
-					<!-- <img height="500" class="fragment" data-fragment-index="6" data-src="../figures/surfing/salmo-growth.png"> -->
-				</div>
-			</div>
-		</div>
-		
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3>Surface migration does not require flagellar propulsion</h3>
-		<div class="container">
-			<div class="col"> 
-				<div class="r-stack">
-					<img height="500" data-fragment-index="1" data-src="../figures/surfing/coli-motor.png">
-					<img height="500" class="fragment" data-fragment-index="2" data-src="../figures/surfing/coli-wt.png">
-					<img height="500" class="fragment" data-fragment-index="3" data-src="../figures/surfing/coli-wt-flic.png">
-					<img height="500" class="fragment" data-fragment-index="4" data-src="../figures/surfing/coli-wt-flgk.png">
-					<!-- <img height="500" class="fragment" data-fragment-index="5" data-src="../figures/surfing/coli-mota.png">
-					<img height="500" class="fragment" data-fragment-index="6" data-src="../figures/surfing/coli-mota-flgk.png"> -->
-					<!-- <img height="500" class="fragment" data-fragment-index="7" data-src="../figures/surfing/coli-growth.png"> -->
-				</div>
-			</div>
-		</div>
-		
-</section>
-
-<!-- <section>
-	<h3>Surface tension: Swashing is not caused by Marangoni stress</h3>
-	<p>
-		<img height="450" data-src="../figures/surfing/srfb_salmo.png"><br>
-		Salmonella
-<p>
-<p style="text-align:left; font-size: 0.45em;">
-	<a href="" target="_blank">
-		Panich*, Dudebout* et al., <i>submitted</i></a>
-</p>
-</section> -->
-
-<section>
-	<h4>Flagellar propulsion aids bacterial surface expansion, but is not required</h4>
-	
-	<p><img height="500" data-src="../figures/sliding-vid.gif"><br>Surface expansion of filament-less E. coli
-	</p>
-	
-</section>
-
-
-
-
-
-
-<!-- ########################################################## -->
-<section>
-	<h3>Swashing depends on sugar fermentation</h3>
-		<div class="container">
-			<div class="r-stack">
-				<img height="350" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/surfing/glucose.png">
-				<img height="400" class="fragment fade-in-then-out" data-fragment-index="2" data-src="../figures/surfing/ackA.png">
-			</div>
-			
-		</div>
-</section>
-
-
-<!-- ########################################################## -->
-<section>
-	<h3>Swashing cells acidify their environment</h3>
-		<div class="container">
-			<div class="col">
-				<div class="r-stack">
-					<img height="500" class="fragment" data-fragment-index="1" data-src="../figures/surfing/salmo-sugars-1.png">
-					<img height="500" class="fragment" data-fragment-index="2" data-src="../figures/surfing/salmo-sugars-2.png">
-					<!-- <img height="500" class="fragment" data-fragment-index="3" data-src="../figures/surfing/salmo-acetate.png"> -->
-				</div>
-			</div>
-		</div>
-		
-</section>
-
-
-<!-- ########################################################## -->
-<section>
-	<h3>Colony topography during swashing</h3>
-		<div class="container">
-				<div class="r-stack">
-					<img height="270" class="fragment" data-fragment-index="1" data-src="../figures/surfing/profile-1.png">
-					<img height="270" class="fragment" data-fragment-index="2" data-src="../figures/surfing/profile-2.png">
-					<img height="270" class="fragment" data-fragment-index="3" data-src="../figures/surfing/profile-3.png">
-					<!-- <img height="500" class="fragment" data-fragment-index="3" data-src="../figures/surfing/salmo-acetate.png"> -->
-				</div>
-		</div>
-		
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3>A model for swashing</h3>
-	<div class="container">
-		<div class="col"> 
-			<div class="r-stack">
-				<img height="350" class="fragment" data-fragment-index="1" data-src="../figures/surfing/model-1.png">
-				<img height="350" class="fragment" data-fragment-index="2" data-src="../figures/surfing/model-2.png">
-				<img height="350" class="fragment" data-fragment-index="3" data-src="../figures/surfing/model-3.png">
-				<img height="350" class="fragment" data-fragment-index="4" data-src="../figures/surfing/model-4.png">
-				<img height="350" class="fragment" data-fragment-index="5" data-src="../figures/surfing/model-5.png">
-				<img height="350" class="fragment" data-fragment-index="6" data-src="../figures/surfing/model-6.png">
-				<img height="350" class="fragment" data-fragment-index="7" data-src="../figures/surfing/model-7.png">
-			</div>
-		</div>
-	</div>
-	
-</section>
-
-<section>
-	<h3>Part III summary</h3>
-	<div class="container">
-		<div class="col">
-			<div class="vertical-left">
-				<p class="fragment fade-in" data-fragment-index="1" style="text-align:left;font-size:0.7em;">Surface migration in <i>Salmonella</i> and <i>E. coli</i> does not require flagellar propulsion.</p>
-				<!-- <p class="fragment fade-in" data-fragment-index="2" style="text-align:left;font-size:0.7em;"><br><br>Swashing cells ferment sugars to generate osmolytes.</p> -->
-				<p class="fragment fade-in" data-fragment-index="2" style="text-align:left;font-size:0.7em;"><br><br>Fluid flow drives cells outward.</p>
-			</div>
-		</div>
-		<div class="col">
-			<img height="150" class="fragment fade-in" data-fragment-index="1" data-src="../figures/surfing/flgk.png"><br>
-			<!-- <img class="fragment fade-in" data-fragment-index="2" height="180" data-src="../figures/surfing/salmo-acetate.png"> -->
-			<img class="fragment fade-in" data-fragment-index="2" height="170" data-src="../figures/surfing/model-summary.png">
-		</div>
-	</div>
-	<p style="text-align:left; font-size: 0.5em;">
-		<a href="https://journals.asm.org/doi/10.1128/jb.00323-25" target="_blank">
-			Panich*, Dudebout*, Blair, and <u>NW</u>, <i>J. Bacteriology</i>, 2025</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section>
-	<h3>What I told you today</h3>
-	<div class="container">
-		<div class="col">
-			<div class="vertical-left">
-				<img class="fragment fade-in" data-fragment-index="1" height="200" data-src="../figures/allostery/motor-cryo.png">
-				<img class="fragment fade-in" data-fragment-index="1" height="120" data-src="../figures/remodeling-schematic-new.jpg">
-				<p class="fragment fade-in" data-fragment-index="1" style="text-align:left;font-size:0.7em;">The flagellar motor dynamically remodels to adapt to external load.</p>
-				<!-- <p class="fragment fade-in" data-fragment-index="3" style="text-align:left;font-size:0.7em;"><br>Osmotic upshift depolarizes the cell but we do not understand how.</p> -->
-			</div>
-		</div>
-		<div class="col">
-			<div class="vertical-left">
-				<img class="fragment fade-in" data-fragment-index="2" height="350" data-src="../figures/directed-evolution/em-conclusions.png">
-				<p class="fragment fade-in" data-fragment-index="2" style="text-align:left;font-size:0.7em;">Flagellar number and morphology both influence motility in complex environemnts.</p>
-				<!-- <p class="fragment fade-in" data-fragment-index="3" style="text-align:left;font-size:0.7em;"><br>Osmotic upshift depolarizes the cell but we do not understand how.</p> -->
-			</div>
-		</div>
-		<div class="col">
-			<br><img class="fragment fade-in" data-fragment-index="3" height="250" data-src="../figures/sliding-vid.gif">
-			<p class="fragment fade-in" data-fragment-index="3" style="text-align:left;font-size:0.7em;">Fermentation drives propulsion-independent surface motility.</p>
-		</div>
-	</div>
-</section>
-
-<!-- ########################################################## -->
 <section>
 	<h3>Acknowledgements</h3>
 	<div class="container">
@@ -767,198 +424,6 @@
 	</div>
 </section>
 
-<section data-visibility="uncounted">
-
-</section>
-
-<!-- ########################################################## --> 
-<section data-visibility="uncounted">
-	<h3>Bidirectional rotation of the flagella enables changes in the swimming direction</h3>
-	<img height="200" src="../figures/tumble-images.png">
-	<img style="margin-left: 250px;" height="200" src="../figures/tumble-schematic.png">	
-	<p style="text-align:left; font-size: 0.45em;">
-		<br><a href="https://jb.asm.org/content/182/10/2793" target="_blank">L. Turner et al., 2000</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Changes in the rotor enable bidirectional rotation</h3>
-	<div class="container">
-		<div class="col">
-			<img height="320" src="../figures/switching.png" >
-			<!-- <img height="190" class="fragment" src="../figures/CW-motor.png" > -->
-			<p style="text-align:left; font-size: 0.45em;">
-				<a href="https://www.nature.com/articles/s41579-021-00626-4" target="_blank"><u>NW</u> and Berg, <b>Nat. Rev. Microbiol.</b> 2021</a>
-			</p>
-			
-		</div>
-		<div class="col">
-			<br>
-			<div class="fragment">	
-				<video controls height="200">
-					<source src="https://static-content.springer.com/esm/art%3A10.1038%2Fs41594-020-0497-2/MediaObjects/41594_2020_497_MOESM9_ESM.mp4#t=36,70" type="video/mp4">
-				</video>
-			<p style="text-align:right; font-size: 0.45em;">
-				<a href="https://www.nature.com/articles/s41594-020-0497-2" target="_blank">Chang et al., <b>Nat. Struct. Mol. Biol</b>, 2020</a>  
-			</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Remodeling kinetics depend on electrorotation speed</h3>
-	<img height="70" data-src="../figures/electro-torque.png">
-	<img class="fragment" data-src="../figures/stoichiometry-plots-subset.png">
-	<!-- <p class="fragment">We extracted the on- and off-rates of stator unit binding</p> -->
-	<p style="text-align:right; font-size: 0.45em;">
-		<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
-			<u>NW</u> et al., <i>PNAS</i> 2019</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Higher electrorotation speed leads to lower torque</h3>
-	<div class="r-stack">
-		<img height="400"  data-src="../figures/TS-CCW.png">
-		<img height="400" class="fragment fade-in" data-src="../figures/TS-CCW-arrow.png">
-	</div>
-	<p style="text-align:right; font-size: 0.45em;">
-		<a href="https://www.sciencedirect.com/science/article/pii/S0006349500766628" target="_blank">
-			Chen and Berg, <i>Biophys J</i> 2000</a>
-	</p>
-</section>
-
-<section data-visibility="uncounted">
-	<h4 style="font-size: 1em;"><b><u>Hypothesis</u></b><br>Stator remodeling depends on torque</h4>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>A quantitative model for stator assembly</h3>
-	<div class="container">
-		<div class="col">
-			<br>
-			<img height="200" data-src="../figures/model-schematic.png">
-			<!-- <img height="270" data-src="../figures/off-rate-torque.png"> -->
-		</div>
-		<div class="col">
-			<br>
-			<img class="fragment" height="235" data-src="../figures/model-fit.png">
-			<br>
-		</div>
-	</div>
-	<p class="fragment">We extracted the on rate ($k_+$) and the off rate ($k_-$) from the data<br><br><br></p>
-	<p style="text-align:right; font-size: 0.45em;">
-		<!-- <a href="https://www.pnas.org/doi/10.1073/pnas.1716002114" target="_blank">
-			Nord et al., PNAS 2017<br></a> -->
-		<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
-			<u>NW</u> et al., <i>PNAS</i> 2019</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>The off-rate decreases with torque</h3>
-	<div class="container">
-		<div class="col">
-			<br>
-			<img height="150" style="margin: 50px 0px 0px 100px;" data-src="../figures/rates-schematic.png">
-			<!-- <img height="270" data-src="../figures/off-rate-torque.png"> -->
-		</div>
-		<div class="col">
-			<img height="350" data-src="../figures/off-rate-torque.png">
-		</div>
-	</div>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Free energy of the bound state decreases with torque</h3>
-	<div class="container">
-		<div class="col">
-			<div class="r-stack">
-				<img height="400"  data-src="../figures/free-energy-1.png">
-				<img height="400" class="fragment fade-in-then-out" data-src="../figures/free-energy-2.png">
-				<img height="400" class="fragment fade-in" data-src="../figures/free-energy-3.png">
-			</div>
-		</div>
-		<div class="col">
-			<img height="370" class="fragment" style="margin-left: 30px;" data-src="../figures/free-energy-torque.png">
-		</div>
-	</div>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>The off-rate decreases exponentially with torque</h3>
-	<img height="400" data-src="../figures/off-rate-torque-fit.png">
-</section>
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Torque anisotropy allows us to test the model</h3>
-	<img height="400" data-src="../figures/TS-both.png">
-	<p style="text-align:right; font-size: 0.45em;">
-		<a href="https://www.sciencedirect.com/science/article/pii/S0006349500766628" target="_blank">
-			Chen and Berg, Biophys J 2000</a>
-		<a href="https://www.pnas.org/content/107/29/12846.short" target="_blank">
-			<br>Yuan et al, PNAS 2010</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Collapse of CCW and CW data validates the model</h3>
-	<div class="container">
-		<div class="col">
-			<img height="350" data-src="../figures/data-collapse.png">
-		</div>
-		<div class="col">
-			<img height="330" style="margin-top: 35px;" data-src="../figures/data-collapse-free-energy.png">
-		</div>
-	</div>
-	<p style="text-align:right; font-size: 0.45em;">
-		<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
-			<u>NW</u> et al., PNAS 2021</a>
-	</p>
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>Surfactants enhance WT surface expansion</h3>
-		
-			<p style="font-size: 0.75em;">
-					<img height="310" data-src="../figures/surfing/Ecoli_tween_swarming.png"><br>
-					<i>E. coli</i> WT <b>swarming</b> at 10 h
-			</p>
-
-</section>
-
-<!-- ########################################################## -->
-<section data-visibility="uncounted">
-	<h3>But surfactants inhibit swashing</h3>
-		
-			<p style="font-size: 0.75em;">
-					<img height="310" data-src="../figures/surfing/ecoli_tween.png"><br>
-					<i>E. coli</i> ∆flgK <b>swashing</b> at 13 h
-			</p>
-		
-</section>
-
-<section data-visibility="uncounted">
-	<h3>Swashing cells acidify their environment</h3>
-		<div class="container">
-			<div class="col">
-				<div >
-					<img height="450" data-src="../figures/surfing/salmo-acetate.png">
-				</div>
-			</div>
-		</div>
-		
-</section>
 
 		</div>
 	</div>
