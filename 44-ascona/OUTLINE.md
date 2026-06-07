@@ -4,7 +4,7 @@
 **Length:** 25 min talk + 5 min Q&A
 **Scope:** Single topic — Seiga Yanagisawa's experimental evolution project
 **Audience:** Biophysics / microbial mechanobiology
-**Mutant naming:** Use real designations (*mutL* 20B, A438V, V148L), not generic "Mutant A/B"
+**Mutant naming (NW decision, 2026-06-07):** The deck keeps the generic display names **Mutant A = *mutL* 20B** (number route) and **Mutant B = *mutL* C11A** (shape route). Do NOT rename these to their real line designations — the figures are already labeled "Mutant A"/"Mutant B", and NW has chosen to present them this way. Flagellin point mutants (A438V, N441S, V148L) keep their residue names. (This reverses the earlier "use real designations" instruction.)
 
 **Submitted abstract title:** *Experimental evolution reveals distinct flagellar strategies for enhanced motility in complex environments*
 
@@ -84,10 +84,12 @@
 - TEM shows evolved cells differ in flagellar number and filament shape — bridges into the two routes
 - **Assets:** reuse em.png
 
-### Slide 10 — *mutL* 20B has more flagella
-- **Header/message:** The *mutL* 20B line carries ~2× as many flagella as the ancestor
-- TEM counts (two-Poisson mixture fits); 20B ≈ 2× WT
-- **Caution:** keep 20B (number route) distinct from C11A (shape route); do not claim C11A is "indistinguishable from WT" — project data show C11A actually has slightly *fewer* flagella
+### Slide 10 — Mutant A has more flagella
+- **Header/message:** Mutant A (*mutL* 20B) carries ~2× as many flagella as the ancestor
+- TEM counts (two-Poisson mixture fits); Mutant A ≈ 2× WT (figure shows means 6.0 vs 3.2)
+- **Caution:** keep Mutant A / *mutL* 20B (number route) distinct from Mutant B / *mutL* C11A (shape route); do not claim C11A is "indistinguishable from WT" — project data show C11A actually has slightly *fewer* flagella
+- **Naming:** display as "Mutant A" per NW (see naming note at top); figures already labeled "Mutant A". No caption needed — header carries it.
+- **Status:** built in index.html; slide complete.
 - **Assets:** reuse wt-mutantA-em + flagella-counts
 
 ### Slide 11a — More flagella improve migration
