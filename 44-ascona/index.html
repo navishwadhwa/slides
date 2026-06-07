@@ -199,17 +199,17 @@
 
 <!-- ########################################################## -->
 <section>
-	<h3>Swimming speed in liquid does not predict motility in complex environments</h3>
+	<h3>Swimming speed in liquid does not predict motility in structured environments</h3>
 	<div class="container">
 		<div class="col" style="flex: 0.7;">
-			<img height="280" data-src="../figures/directed-evolution/tracking-video-seiga.gif">
+			<img height="240" data-src="../figures/directed-evolution/tracking-video-seiga.gif">
 			<p style="font-size: 0.45em;">Single-cell tracking in liquid</p>
 		</div>
 		<div class="col fragment" style="flex: 1.3;">
-			<img width="640" data-src="../figures/directed-evolution/swim-speed-ficoll-summary.png">
+			<img height="210" data-src="../figures/directed-evolution/swim-speed-ficoll-summary.png">
 		</div>
 	</div>
-	<p class="fragment" style="font-size: 0.6em;"><i>mutL</i> 20B swims faster, <i>mutL</i> C11A swims slower &mdash; yet both make larger halos</p>
+	<p class="fragment" style="font-size: 0.6em;"><span style="color: #060606">Mutant A</span> (<i>mutL</i> 20B) swims faster, <span style="color: #030303">Mutant B</span> (<i>mutL</i> C11A) swims slower. Yet both make larger halos</p>
 </section>
 
 <!-- ########################################################## -->
@@ -217,6 +217,7 @@
 	<h3>Selection drives morphological changes</h3>
 	<br>
 	<img height="330" data-src="../figures/directed-evolution/em.png">
+	<p style="font-size: 0.6em;">Evolved cells differ in flagellar number <i>and</i> filament shape, pointing to two routes</p>
 </section>
 
 
@@ -227,17 +228,29 @@
 		<img height="200" data-src="../figures/directed-evolution/wt-mutantA-em.png">
 	</div>
 	<div class="fragment">
-		<img height="350" data-src="../figures/directed-evolution/flagella-counts.png">
+		<img height="300" data-src="../figures/directed-evolution/flagella-count-distributions.png">
 	</div>
 </section>
 
 <!-- ########################################################## -->
 <section>
 	<h3>More flagella improve motility in soft agar</h3>
-	<div class="container r-stack">
-			<img height="400" class="fragment fade-in-then-out" data-fragment-index="1" data-src="../figures/directed-evolution/IPTG-sketch.png">
-			<img height="400" class="fragment fade-in-then-out" data-fragment-index="2" data-src="../figures/directed-evolution/IPTG-data.png">
+	<div class="container">
+		<div class="col">
+			<img height="250" data-src="../figures/directed-evolution/IPTG-sketch.png">
+			<!-- <p style="font-size: 0.5em;">IPTG inducible flagella</i></p> -->
+		</div>
+		<div class="col fragment">
+			<img height="200" data-src="../figures/directed-evolution/flagella-vs-iptg.png">
+			<!-- <p style="font-size: 0.5em;">IPTG raises flagellar number</p> -->
+		</div>
+		<div class="col fragment">
+			<img height="300" data-src="../figures/directed-evolution/IPTG-data.png">
+			<!-- <p style="font-size: 0.5em;">More flagella give bigger halos</p> -->
+		</div>
 	</div>
+	<!-- <p style="font-size: 0.45em;">More flagella also give faster runs and straighter swimming.</p> -->
+	<p style="font-size: 0.4em; text-align: left;"><i>Ptac</i> strain courtesy of <b>Victor Sourjik</b></p>
 </section>
 
 <!-- ########################################################## -->
