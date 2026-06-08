@@ -314,17 +314,34 @@
 
 <!-- ########################################################## -->
 <section>
-	<h3>Mutant filaments undergo dramatic shape changes</h3>
-	<div class="container">
-		<div class="col fragment">
-			Resting
-			<div><img height="250" data-src="../figures/directed-evolution/filament-mutants/2025-07-31 WT_005-resting.gif"></div>
-			<div><img height="250" data-src="../figures/directed-evolution/filament-mutants/2025-07-18 A438V-S219C_4 resting.gif"></div>
+	<h3>A438V swims slower in liquid yet migrates better in agar</h3>
+	<div class="container" style="justify-content: center; align-items: center; gap: 24px;">
+		<div class="col" style="flex: 2.5;">
+			<img height="380" data-src="../figures/directed-evolution/wt-mutantB-plasmid-plate-speed.png">
 		</div>
-		<div class="col fragment">
-			Rotating
-			<div><img height="250" data-src="../figures/directed-evolution/filament-mutants/2025-07-31 WT013 rotating.gif"></div>
-			<div><img height="250" data-src="../figures/directed-evolution/filament-mutants/2025-07-18 A438V-S219C_1 - rotating.gif"></div>
+		<div class="col" style="flex: 1;">
+			<img height="250" data-src="../figures/directed-evolution/halo-wt-a438v.png">
+		</div>
+	</div>
+	<!-- <p style="font-size: 0.6em;">The migration advantage grows with viscosity: 1.7&times; at 0% Ficoll, 3.4&times; at 10%</p> -->
+</section>
+
+<!-- ########################################################## -->
+<section>
+	<h3>Mutant filaments undergo dramatic shape changes</h3>
+	<div style="display: flex; justify-content: center;">
+		<div style="display: grid; grid-template-columns: auto auto auto; gap: 6px 22px; align-items: center; justify-items: center; margin-top: 6px;">
+			<div></div>
+			<div style="font-size: 0.6em; font-weight: bold;">Resting</div>
+			<div style="font-size: 0.6em; font-weight: bold;" class="fragment fade-in" data-fragment-index="1">Rotating</div>
+
+			<div style="font-size: 0.6em; font-weight: bold; color: #333333;">WT</div>
+			<img height="235" data-src="../figures/directed-evolution/filament-mutants/2025-07-31 WT_005-resting.gif">
+			<img height="235" class="fragment fade-in" data-fragment-index="1" data-src="../figures/directed-evolution/filament-mutants/2025-07-31 WT013 rotating.gif">
+
+			<div style="font-size: 0.6em; font-weight: bold; color: #D55E00;">A438V</div>
+			<img height="235" data-src="../figures/directed-evolution/filament-mutants/2025-07-18 A438V-S219C_4 resting.gif">
+			<img height="235" class="fragment fade-in" data-fragment-index="1" data-src="../figures/directed-evolution/filament-mutants/2025-07-18 A438V-S219C_1 - rotating.gif">
 		</div>
 	</div>
 </section>
