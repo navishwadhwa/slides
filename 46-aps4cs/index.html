@@ -13,6 +13,22 @@
 .reveal .notes { display:none; }
 .reveal .slides section > h3 { font-size:0.9em; }
 .reveal .r-stack img { object-fit:contain; }
+#slide-13 .comparison { display:grid; grid-template-columns:230px 1fr; gap:24px; align-items:center; }
+#slide-13 .colonies { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+#slide-13 .image-region { position:relative; overflow:hidden; width:100%; }
+#slide-13 .image-region img { position:absolute; max-width:none; max-height:none; height:auto; margin:0; }
+#slide-13 .motor-region { aspect-ratio:650 / 950; }
+#slide-13 .motor-region img { width:229.076923%; left:-64.615385%; top:-10%; }
+#slide-13 .image-region::after { content:""; position:absolute; pointer-events:none; }
+#slide-13 .motor-region::after { bottom:0; left:0; width:100%; height:12%; background:linear-gradient(to right, white 20%, transparent 20%, transparent 80%, white 80%); }
+#slide-13 .motor-region::before { content:""; position:absolute; bottom:0; left:0; width:100%; height:5%; background:white; z-index:1; pointer-events:none; }
+#slide-13 .normal-region { aspect-ratio:1; }
+#slide-13 .normal-region img { width:212.714286%; left:-2.857143%; top:-135.714286%; }
+#slide-13 .normal-region::after { top:0; right:0; width:25%; height:8%; background:white; }
+#slide-13 .mutant-region { aspect-ratio:715 / 700; }
+#slide-13 .mutant-region img { width:208.251748%; left:-105.594406%; top:-135.714286%; }
+#slide-13 .mutant-region::after { top:0; left:0; width:20%; height:8%; background:white; }
+#slide-13 .colonies p { margin:12px 0 0; }
 </style>
 </head>
 <body>
@@ -195,8 +211,23 @@
 
 <section id="slide-13" data-duration="85" data-source="43-UofA:45;45-cbp20:24">
 <h3>Surface migration persists without flagellar propulsion</h3>
-<img data-src="../figures/surfing/coli-wt-flgk.png" height="445">
-<p>Normal cells versus cells without flagellar filaments</p><p class="citation"><a href="https://journals.asm.org/doi/10.1128/jb.00323-25" target="_blank" rel="noopener">Panich*, Dudebout*, Blair, and <u>NW</u>, <i>J. Bacteriology</i> 2025</a></p>
+<div class="comparison">
+<div>
+<p><i>E. coli</i></p>
+<div class="image-region motor-region"><img data-src="../figures/surfing/coli-wt-flgk.png" alt="Schematic of the bacterial flagellar motor, hook, and filament"></div>
+</div>
+<div class="colonies fragment fade-in" data-fragment-index="0">
+<div>
+<div class="image-region normal-region"><img data-src="../figures/surfing/coli-wt-flgk.png" alt="Surface expansion of normal E. coli cells"></div>
+<p>Normal cells</p>
+</div>
+<div>
+<div class="image-region mutant-region"><img data-src="../figures/surfing/coli-wt-flgk.png" alt="Surface expansion of E. coli cells without flagellar filaments"></div>
+<p>Cells without<br>flagellar filaments</p>
+</div>
+</div>
+</div>
+<p class="citation"><a href="https://journals.asm.org/doi/10.1128/jb.00323-25" target="_blank" rel="noopener">Panich*, Dudebout*, Blair, and <u>NW</u>, <i>J. Bacteriology</i> 2025</a></p>
 <aside class="notes">Target: 85 seconds. Explain WT and delta-flgK in plain language. Cells unable to attach the propulsive filament still expand across the surface. The same broad phenomenon is seen in Salmonella; detailed comparisons are in backup. These images do not establish that expansion rates are identical.</aside>
 </section>
 
