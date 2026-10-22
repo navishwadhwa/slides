@@ -16,6 +16,9 @@
 .reveal .notes { display:none; }
 .reveal .slides section > h3 { font-size:0.9em; }
 .reveal .r-stack img { object-fit:contain; }
+#slide-10 .remodeling-diagram { width:90%; height:auto; max-height:420px; }
+#slide-10 .citation { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 24px; font-size:0.36em; margin-top:22px; }
+#slide-10 .citation a { color:#586e75; }
 #slide-13 .comparison { display:grid; grid-template-columns:230px 1fr; gap:24px; align-items:center; }
 #slide-13 .colonies { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
 #slide-13 .image-region { position:relative; overflow:hidden; width:100%; }
@@ -167,13 +170,12 @@
 
 <section id="slide-10" data-duration="60" data-source="43-UofA:18">
 <h3>Higher load keeps more stators attached</h3> 
-				<br>	
-				<img height="250" data-src="../figures/remodeling-schematic-new.jpg">	
-				<p style="text-align:right; font-size: 0.45em;">
+				<img class="remodeling-diagram" data-src="../figures/remodeling-schematic-new.jpg" alt="High-load motor with more attached stators and low-load motor with fewer attached stators">
+				<p class="citation">
 					<a href="https://www.pnas.org/content/116/24/11764" target="_blank">
-					<u>NW</u> et al., <i>PNAS</i> 2019</a><br>
+					<u>NW</u> et al., <i>PNAS</i> 2019</a>
 					<a href="https://www.pnas.org/content/118/15/e2024608118" target="_blank">
-						<u>NW</u> et al., <i>PNAS</i> 2021</a><br>
+						<u>NW</u> et al., <i>PNAS</i> 2021</a>
 						<a href="https://www.nature.com/articles/s41467-022-33075-5" target="_blank">
 						<u>NW</u>*, Sassi* et al., <i>Nat Comm</i> 2022</a>
 				</p>
